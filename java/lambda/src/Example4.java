@@ -18,6 +18,12 @@ public class Example4 {
 
         MyClass mc = s.apply(100);
         System.out.println(mc.iv);
+
+//        Function<Integer, int[]> f2 = (i) ->new int[i];
+        Function<Integer, int[]> f2 = int[]::new; // 메서드 참조
+        int[] arr =f2.apply(100);
+
+        System.out.println(f2.apply(100).length);
     }
 }
 
