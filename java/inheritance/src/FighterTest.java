@@ -19,6 +19,11 @@ class Fighter extends Unit2 implements Fightable{
     public void attack(Fightable f){
         System.out.println(f+"를 공격");
     }
+
+    Fightable getFightable(){
+        Fightable f = new Fighter();
+        return f;
+    }
 }
 
 
