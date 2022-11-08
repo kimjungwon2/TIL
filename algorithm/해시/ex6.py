@@ -27,15 +27,16 @@ def solution(genres, plays):
             if (len(data[i]) < 2 and j == 1):
                 break
 
-            if (len(data[i][j]) > 2 and data[i][j][0] == data[i][j+1][0]):
-                print('출력')
-                s = min(data[i][j][1], data[i][j+1][1])
+            if (j == 0 and len(data[i]) >= 2 and data[i][0][0] == data[i][1][0]):
+                s = min(data[i][0][1], data[i][1][1])
+                m = max(data[i][0][1], data[i][1][1])
+                answer.append(s)
+                answer.append(m)
+                break
+            elif (j == 1 and len(data[i]) > 2 and data[i][1][0] == data[i][2][0]):
+                s = min(data[i][1][1], data[i][2][1])
                 answer.append(s)
             else:
                 answer.append(data[i][j][1])
 
     return answer
-
-
-solution(["classic", "pop", "classic", "classic", "pop", "rock"],
-         [500, 600, 150, 800, 2500, 900])
