@@ -1,24 +1,26 @@
 answer = 0
 
-
-def DFS(idx, numbers, target, value):
-    global answer
-    N = len(numbers)
-    if (idx == N and target == value):
-        answer += 1
-        return
-    if (idx == N):
-        return
-
-    DFS(idx+1, numbers, target, value+numbers[idx])
-    DFS(idx+1, numbers, target, value-numbers[idx])
-
-
 def solution(numbers, target):
-    global answer
-    DFS(0, numbers, target, 0)
+    global answer 
+    
+    dfs(0,0,numbers,target)
+    
     return answer
 
+def dfs(index, sum, numbers, target):
+    global answer
+    
+    length = len(numbers)
+    
+    if(index == length):
+        if(target==sum):
+            answer+=1
+            
+            return 1
+        return 0
+    
+    dfs(index+1,sum+numbers[index],numbers,target)
+    dfs(index+1,sum-numbers[index],numbers,target)
 
-count = solution([1, 1, 1, 1, 1],3)
-print(count)
+
+solution([1, 1, 1, 1, 1],3)

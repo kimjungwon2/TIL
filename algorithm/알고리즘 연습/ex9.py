@@ -3,7 +3,7 @@ def dfs(graph, v, visited):
     print(v, end=' ')
 
     for i in graph[v]:
-        if not visited[i]:
+        if (not visited[i]):
             dfs(graph, i, visited)
 
 

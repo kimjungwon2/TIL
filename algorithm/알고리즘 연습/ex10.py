@@ -1,18 +1,19 @@
 from collections import deque
 
-def bfs(start,visited, graph):
+def bfs(node,visited, graph):
 
-    queue = deque([start])
-    visited[start] = True
+    visited[node] = True
+    queue = deque([node])
 
     while queue:
         v = queue.popleft()
-        print(v,end=' ')
+        print(v,end='')
 
         for i in graph[v]:
             if not visited[i]:
                 queue.append(i)
                 visited[i] = True
+
     
 
 graph = [
