@@ -7,13 +7,12 @@ def quick_sort(array):
         return array
 
     pivot = array[0]
-    tail = array[1:]  # 피벗을 제외한 리스트
+    a = array[1:]
 
-    left_side = [x for x in tail if x <= pivot]  # 피벗의 왼쪽부분
-    right_side = [x for x in tail if x > pivot]
+    left = [x for x in a if x<=pivot]
+    right= [x for x in a if x>pivot]
 
-    # 분할 이후 왼쪽과 오른쪽 부분에서 각각 정렬 수행. 전체 리스트 반환
-    return quick_sort(left_side) + [pivot] + quick_sort(right_side)
+    return quick_sort(left)+[pivot]+quick_sort(right)
 
 
 print(quick_sort(array))
