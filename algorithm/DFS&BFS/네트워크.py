@@ -1,28 +1,29 @@
-answer = 1
+from collections import deque
 
 
 def solution(n, computers):
-    global answer
+    answer = 0
 
-    visited = n*[False]
-    node = 0
+    visited = [False]*(n+1)
 
-    while True:
-        dfs(computers, node, visited)
-
-        if False in visited:
-            node = visited.index(False)
+    for i in range(n):
+        if (visited[i] == False):
+            bfs(i, computers, visited)
             answer += 1
-        else:
-            break
 
     return answer
 
 
-def dfs(computers, node, visited):
-    global answer
-    visited[node] = True
+def bfs(node, computers, visited):
+    queue = deque()
+    queue.append(node)
 
-    for i, neighbor in enumerate(computers[node]):
-        if (neighbor == 1 and visited[i] == False):
-            dfs(computers, i, visited)
+    while queue:
+        node = queue.popleft()
+
+        for index, i in enumerate(computers[node]):
+            if (visited[index] == False and i == 1):
+                visited[index] = True
+                queue.append(index)
+
+    return 0
