@@ -9,3 +9,4 @@ def solution(array, n):
     answer = array[min_index]
 
     return answer
+
