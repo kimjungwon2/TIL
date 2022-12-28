@@ -1,3 +1,6 @@
+import re
+
+
 def pell(str):
     a = []
 
@@ -11,5 +14,15 @@ def pell(str):
     return False
 
 
+def isPalin(str):
+    str = str.lower()
+    str = re.sub('[^a-z0-9]', '', str)
+
+    return str == str[::-1]
+
+
 print(pell("A man, a plan, a canal: Panama"))
 print(pell("race a car"))
+
+print(isPalin("A man, a plan, a canal: Panama"))
+print(isPalin("race a car"))
