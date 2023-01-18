@@ -31,57 +31,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .anyRequest().authenticated();
         http
-                .formLogin()
-//                .loginPage("/loginpage")
-                .defaultSuccessUrl("/")
-                .failureUrl("/login")
-                .usernameParameter("userId")
-                .passwordParameter("passwd")
-                .successHandler(new AuthenticationSuccessHandler() {
-                    @Override
-                    public void onAuthenticationSuccess(HttpServletRequest request,
-                            HttpServletResponse response, Authentication authentication)
-                            throws IOException, ServletException {
-                        System.out.println("authentication"+authentication.getName());
-                        response.sendRedirect("/");
-                    }
-                })
-                .failureHandler(new AuthenticationFailureHandler() {
-                    @Override
-                    public void onAuthenticationFailure(HttpServletRequest request,
-                            HttpServletResponse response, AuthenticationException exception)
-                            throws IOException, ServletException {
-                        System.out.println("authentication"+exception.getMessage());
-                        response.sendRedirect("/login");
-                    }
-                })
-                .permitAll(); // 로그인 화면이라 모두 허용해야 한다.
-
-        http
-                .logout()
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/login")
-                .addLogoutHandler(new LogoutHandler() {
-                    @Override
-                    public void logout(HttpServletRequest request, HttpServletResponse response,
-                            Authentication authentication) {
-                        HttpSession session = request.getSession();
-                        session.invalidate();
-                    }
-                })
-                .logoutSuccessHandler(new LogoutSuccessHandler() {
-                    @Override
-                    public void onLogoutSuccess(HttpServletRequest request,
-                            HttpServletResponse response, Authentication authentication)
-                            throws IOException, ServletException {
-                        response.sendRedirect("/login");
-                    }
-                })
-                .and()
-                .rememberMe()
-                .rememberMeParameter("remember")
-                .tokenValiditySeconds(3600)
-                .userDetailsService(userDetailsService)
-                ;
+                .formLogin();
     }
 }
