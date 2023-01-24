@@ -32,11 +32,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated();
 
         http
-                .formLogin();
-
-
-        http
+                .formLogin()
+        .and()
                 .sessionManagement()
-                .sessionFixation().none();
+                .maximumSessions(1)
+                .maxSessionsPreventsLogin(true);
     }
 }
