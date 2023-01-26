@@ -20,8 +20,8 @@ public class Member {
         this.name = name;
     }
 
-    public void setGradle(Grade gradle) {
-        this.grade = gradle;
+    public void setGrade(Grade grade) {
+        this.grade = grade;
     }
 
     public Long getId() {
@@ -32,7 +32,7 @@ public class Member {
         return name;
     }
 
-    public Grade getGradle() {
+    public Grade getGrade() {
         return grade;
     }
 }
