@@ -16,13 +16,13 @@ public class Booking {
         this.time = time;
     }
 
-    public static Booking createBook(Show show,LocalDateTime time){
+    public static Booking createBooking(Show show,LocalDateTime time){
         return new Booking(show, time);
     }
 
     public static Booking createPremiumBooking(Show show,LocalDateTime time,PremiumExtra extra){
 
-        Booking booking =  createBook(show,time);
+        Booking booking =  createBooking(show,time);
         booking.premiumDelegate = new PremiumDelegate(booking,extra);
         return booking;
     }
