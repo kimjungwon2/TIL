@@ -1,53 +1,40 @@
-import math
+from collections import deque
 
-def solution(numbers):
-    answer = 0
-    arr = [i for i in numbers]
-    visited = [False]*(len(numbers)+1)
-    final = []
-      
-    recur(0,arr,visited,'',final)
-    
-    answer = len(set(final))
-    
+def bfs(node, tree, visited, wire, cnt):
+    queue = deque()
+    queue.append([node, tree, visited, wire])
+    visited[node] = True
+
+    while queue:
+        node, tree, visited, wire = queue.popleft()
+        cnt += 1
+
+        for i in tree[node]:
+            if not ((node == wire[0] and i == wire[1]) or (node == wire[1] and i == wire[0])):
+                if not visited[i]:
+                    visited[i] = True
+                    queue.append([i, tree, visited, wire])
+
+    return cnt
+
+
+def solution(n, wires):
+    answer = 1e9
+    tree = [[] for _ in range(n + 1)]
+
+    for wire in wires:
+        a, b = wire
+        tree[a].append(b)
+        tree[b].append(a)
+
+    for wire in wires:
+        visited = [False] * (n + 1)
+        temp = []
+        for i in range(1, n + 1):
+            if not visited[i]:
+                cnt = bfs(i, tree, visited, wire, 0)
+                temp.append(cnt)
+
+        answer = min(answer, abs(temp[0] - temp[1]))
+
     return answer
-
-
-def recur(num,arr,visited,result,final):  
-    length = len(arr)
-    if(num==length):
-        return
-    
-    for i in range(1,length+1):
-        if visited[i] == False:
-            visited[i] = True
-            
-            result+=arr[i-1]
-
-            #소수 확인
-            a = isPrime(int(result))
-            if(a==True):
-                final.append(int(result))
-            else:
-                a = False
-            
-            recur(num+1,arr,visited,result,final)
-            
-            #다시 올라가기
-            visited[i] = False
-            #문자열 자르기
-            result = result[:-1]
-            
-            
-                  
-def isPrime(numbers):
-    number = int(numbers)
-    
-    if(number<=1):
-        return False
-    
-    for i in range(2,int(math.sqrt(number))+1):
-        if number%i ==0:
-            return False
-        
-    return True
