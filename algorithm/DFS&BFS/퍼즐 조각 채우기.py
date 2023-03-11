@@ -107,3 +107,4 @@ def solution(game_board, table):
         pieces = new_pieces
 
     return answer
+
