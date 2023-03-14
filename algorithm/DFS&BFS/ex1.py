@@ -1,22 +1,29 @@
-def solution(priorities, location):
+from collections import deque
+
+
+def solution(n, computers):
     answer = 0
-    arr = []
-    length = len(priorities)
 
-    while (True):
-        max_value = max(priorities)
+    visited = [False]*(n+1)
 
-        for i, j in enumerate(priorities):
-            if (max_value == j and max_value != 0):
-                arr.append((j, i))
-                priorities[i] = 0
-                max_value = max(priorities)
-
-        if (len(arr) == length):
-            break
-
-    for i, j in enumerate(arr):
-        if (j[1] == location):
-            answer = i+1
+    for i in range(n):
+        if (visited[i] == False):
+            bfs(i, computers, visited)
+            answer += 1
 
     return answer
+
+
+def bfs(node, computers, visited):
+    queue = deque()
+    queue.append(node)
+
+    while queue:
+        node = queue.popleft()
+
+        for index, i in enumerate(computers[node]):
+            if (visited[index] == False and i == 1):
+                visited[index] = True
+                queue.append(index)
+
+    return 0
