@@ -1,29 +1,32 @@
-from collections import deque
+def solution(genres, plays):
+    answer = []
+    album = dict()
+    album_sum = dict()
 
+    for index, (i, j) in enumerate(zip(genres, plays)):
+        if (i not in album):
+            album[i] = [(index, j)]
+            album_sum[i] = j
+        else:
+            album[i].append((index, j))
+            album_sum[i] += j
 
-def solution(n, computers):
-    answer = 0
+    for i in album:
+        album[i] = sorted(album[i], key=lambda x: x[1], reverse=True)
 
-    visited = [False]*(n+1)
+    max_value = []
 
-    for i in range(n):
-        if (visited[i] == False):
-            bfs(i, computers, visited)
-            answer += 1
+    for i, j in zip(album_sum.keys(), album_sum.values()):
+        max_value.append((i, j))
+
+    max_value = sorted(max_value, key=lambda x: x[1], reverse=True)
+
+    for i in max_value:
+        for j in range(2):
+            if (len(album[i[0]]) == 1):
+                answer.append(album[i[0]][j][0])
+                break
+            else:
+                answer.append(album[i[0]][j][0])
 
     return answer
-
-
-def bfs(node, computers, visited):
-    queue = deque()
-    queue.append(node)
-
-    while queue:
-        node = queue.popleft()
-
-        for index, i in enumerate(computers[node]):
-            if (visited[index] == False and i == 1):
-                visited[index] = True
-                queue.append(index)
-
-    return 0
