@@ -1,16 +1,15 @@
-def solution(s):
-    answer = True
-    stack = []
+def solution(citations):
+    citations.sort(reverse=True)
 
-    for i in range(len(s)):
-        if (s[i] == '('):
-            stack.append('(')
-        else:
-            if (len(stack) == 0):
-                return False
-            stack.pop()
+    answer = 0
+    arr = []
 
-    if (len(stack) != 0):
-        return False
+    for i, j in enumerate(citations):
+        if (i >= j):
+            arr.append(i)
+            break
 
-    return True
+    if (len(arr) == 0):
+        return len(citations)
+    else:
+        return arr[0]
