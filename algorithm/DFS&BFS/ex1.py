@@ -1,15 +1,10 @@
-def solution(citations):
-    citations.sort(reverse=True)
+from itertools import permutations
 
-    answer = 0
-    arr = []
 
-    for i, j in enumerate(citations):
-        if (i >= j):
-            arr.append(i)
-            break
+def solution(numbers):
+    str_numbers = list(map(str, numbers))
+    str_numbers.sort(key=lambda x: x*3, reverse=True)
 
-    if (len(arr) == 0):
-        return len(citations)
-    else:
-        return arr[0]
+    answer = str(int(''.join(str_numbers)))
+
+    return answer
