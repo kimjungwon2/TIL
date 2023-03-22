@@ -39,7 +39,7 @@ def bfs(x,y,maps):
                 queue.append((nx,ny))
         
     return maps[n-1][m-1]
-    
+
 n = solution([[1,0,1,1,1],[1,0,1,0,1],[1,0,1,1,1],[1,1,1,0,1],[0,0,0,0,1]])
 
 print(n)
