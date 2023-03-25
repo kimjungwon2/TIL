@@ -1,23 +1,17 @@
-answer = 0
+def solution(array, commands):
+    answer = []
 
+    length = len(commands)
 
-def solution(numbers, target):
-
-    length = len(numbers)
-
-    recur(numbers, target, 0, 0, length)
+    for i in range(length):
+        for j in range(3):
+            if (j == 0):
+                a = commands[i][j]
+            elif (j == 1):
+                b = commands[i][j]
+            elif (j == 2):
+                c = commands[i][j]
+        d = sorted(array[a-1:b])
+        answer.append(d[c-1])
 
     return answer
-
-
-def recur(numbers, result, target, n, length):
-    global answer
-    if (length == n):
-        if (result == target):
-            answer += 1
-            return
-        else:
-            return
-
-    recur(numbers, result+numbers[n], target, n+1, length)
-    recur(numbers, result-numbers[n], target, n+1, length)
