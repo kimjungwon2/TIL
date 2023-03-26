@@ -1,17 +1,25 @@
-def solution(array, commands):
-    answer = []
+def solution(sizes):
+    x = []
+    y = []
 
-    length = len(commands)
+    for i in sizes:
+        x.append(i[0])
+        y.append(i[1])
 
-    for i in range(length):
-        for j in range(3):
-            if (j == 0):
-                a = commands[i][j]
-            elif (j == 1):
-                b = commands[i][j]
-            elif (j == 2):
-                c = commands[i][j]
-        d = sorted(array[a-1:b])
-        answer.append(d[c-1])
+    max_value = max(max(x), max(y))
 
-    return answer
+    target = 0
+
+    for i in sizes:
+        if (max_value-i[0] < max_value-i[1]):
+            if (target > i[1]):
+                continue
+            else:
+                target = i[1]
+        else:
+            if (target > i[0]):
+                continue
+            else:
+                target = i[0]
+
+    return target*max_value
