@@ -1,38 +1,29 @@
 from collections import deque
 
 
-def solution(begin, target, words):
-    answer = bfs(begin, target, words)
+def solution(n, computers):
+    answer = 0
+
+    visited = [False]*(n+1)
+
+    for i in range(n):
+        if (visited[i] == False):
+            bfs(i, computers, visited)
+            answer += 1
+
     return answer
 
 
-def bfs(begin, target, words):
-    count = 0
+def bfs(node, computers, visited):
     queue = deque()
-    queue.append((begin, count))
-
-    if (target not in words):
-        return 0
+    queue.append(node)
 
     while queue:
-        start, count = queue.popleft()
+        node = queue.popleft()
 
-        for i in words:
-            if (change(start, i) == True):
-                if i == target:
-                    return count+1
-                else:
-                    queue.append((i, count+1))
+        for index, i in enumerate(computers[node]):
+            if (visited[index] == False and i == 1):
+                visited[index] = True
+                queue.append(index)
 
-
-def change(word, change):
-    length = len(word)
-    diff = 0
-    for i in range(length):
-        if word[i] != change[i]:
-            diff += 1
-
-    if diff == 1:
-        return True
-    else:
-        return False
+    return 0
