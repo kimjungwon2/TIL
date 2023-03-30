@@ -1,28 +1,16 @@
-hashDict = {'ftp': 21, 'ssh': 22, 'stmp': 25, 'http': 80}
-
-print(hashDict.keys())
-print(hashDict.values())
-print(hashDict.items())
-print(hashDict.get('ftps'))
-
-del hashDict['stmp']
-print(hashDict)
-
-hass = list(hashDict.keys())
-print(hass)
+from collections import Counter
 
 
-hashDict.setdefault('e')
-print(hashDict)
+def solution(clothes):
+    arr = []
+    sum = 1
 
-hashDict.setdefault('fg', 50)
-print(hashDict)
+    for i in clothes:
+        arr.append(i[1])
 
-hashDict.update(ftp=50,g=30)
-print(hashDict)
+    counter = Counter(arr)
 
-print("ftp" in hashDict)
-print("철수" in hashDict)
+    for i in counter:
+        sum *= (counter[i]+1)
 
-hashDict.clear()
-print(hashDict)
+    return sum-1
