@@ -1,6 +1,5 @@
 from collections import Counter
 
-
 def solution(progresses, speeds):
     answer = []
     length = len(progresses)

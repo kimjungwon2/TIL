@@ -14,3 +14,4 @@ def solution(clothes):
         sum *= (counter[i]+1)
 
     return sum-1
+        
