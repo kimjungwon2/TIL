@@ -1,35 +1,12 @@
-ans = 0
+def solution(triangle):
 
-def solution(k, dungeons):
-    answer = 0
-    length = len(dungeons)
-    visited = [False] * length
+    dp = [[0] * len(triangle) for _ in range(len(triangle))]
+    dp[0][0] = triangle[0][0]
 
-    recur(k, dungeons, length, visited, answer)
+    for i in range(0, len(triangle) - 1):
+        for j in range(len(triangle[i])):
+            dp[i + 1][j] = max(dp[i + 1][j], dp[i][j] + triangle[i + 1][j])
+            dp[i + 1][j + 1] = max(dp[i + 1][j + 1], dp[i]
+                                   [j] + triangle[i + 1][j + 1])
 
-    return ans
-
-def recur(k, dungeons, length, visited, answer):
-    global ans
-    ans = max(ans, answer)
-
-    min_value = dungeons[0][0]
-
-    for i in dungeons:
-        min_value = min(min_value,i[0])
-
-    if(k<min_value):
-        return
-
-    for i in range(length):
-        if(k>=dungeons[i][0] and visited[i]==False):
-            visited[i]=True
-            k-=dungeons[i][1]
-            answer+=1
-
-            recur(k, dungeons, length, visited, answer)
-
-            #다시 위로 올라가기
-            visited[i]=False
-            k+=dungeons[i][1]
-            answer-=1
+    return max(dp[-1]) 
