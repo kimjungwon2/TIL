@@ -1,12 +1,23 @@
-def solution(triangle):
+answer = 0
 
-    dp = [[0] * len(triangle) for _ in range(len(triangle))]
-    dp[0][0] = triangle[0][0]
 
-    for i in range(0, len(triangle) - 1):
-        for j in range(len(triangle[i])):
-            dp[i + 1][j] = max(dp[i + 1][j], dp[i][j] + triangle[i + 1][j])
-            dp[i + 1][j + 1] = max(dp[i + 1][j + 1], dp[i]
-                                   [j] + triangle[i + 1][j + 1])
+def solution(numbers, target):
 
-    return max(dp[-1]) 
+    length = len(numbers)
+
+    recur(numbers, target, 0, 0, length)
+
+    return answer
+
+
+def recur(numbers, result, target, n, length):
+    global answer
+    if (length == n):
+        if (result == target):
+            answer += 1
+            return
+        else:
+            return
+
+    recur(numbers, result+numbers[n], target, n+1, length)
+    recur(numbers, result-numbers[n], target, n+1, length)
