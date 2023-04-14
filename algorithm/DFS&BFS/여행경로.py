@@ -1,32 +1,39 @@
-import collections
-answer = []
-graph = collections.defaultdict(list)
-visited = collections.defaultdict(list)
+from collections import defaultdict
 
 
-def dfs(s, cnt, list, l):
-    if cnt == l:
-        answer.append(list)
-        return
+def dfs(graph, N, key, footprint):
+    print(footprint)
 
-    if len(answer) >= 1:
-        return
+    if len(footprint) == N + 1:
+        return footprint
 
-    for a in range(len(graph[s])):
-        if visited[s][a] == 0:
-            visited[s][a] = 1
-            dfs(graph[s][a], cnt+1, list+[graph[s][a]], l)
-            visited[s][a] = 0
+    for idx, country in enumerate(graph[key]):
+        graph[key].pop(idx)
+
+        tmp = footprint[:]
+        tmp.append(country)
+
+        ret = dfs(graph, N, country, tmp)
+
+        graph[key].insert(idx, country)
+
+        if ret:
+            return ret
 
 
 def solution(tickets):
+    answer = []
 
-    for a, b in tickets:
-        graph[a].append(b)
-        visited[a].append(0)
-    for a, b in graph.items():
-        graph[a].sort()
+    graph = defaultdict(list)
 
-    dfs("ICN", 0, ["ICN"], len(tickets))
+    N = len(tickets)
+    for ticket in tickets:
+        graph[ticket[0]].append(ticket[1])
+        graph[ticket[0]].sort()
 
-    return answer[:][0]
+    answer = dfs(graph, N, "ICN", ["ICN"])
+
+    return answer
+
+
+print(solution([["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]]))
