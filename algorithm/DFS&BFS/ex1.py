@@ -1,29 +1,38 @@
-from collections import deque
-
-graph = {
-    'A': ['B', 'D', 'E'],
-    'B': ['A', 'C', 'D'],
-    'C': ['B'],
-    'D': ['A', 'B'],
-    'E': ['A']
-}
+from collections import defaultdict
 
 
-def bfs(graph, start):
-    queue = deque(start)
-    visited = [start]
+def dfs(graph, N, key, footprint):
+    print(footprint)
 
-    while queue:
-        v = queue.popleft()
+    if len(footprint) == N + 1:
+        return footprint
 
-        for next in graph[v]:
-            if next not in visited:
-                queue.append(next)
-                visited.append(next)
+    for idx, country in enumerate(graph[key]):
+        graph[key].pop(idx)
 
-    return visited
+        tmp = footprint[:]
+        tmp.append(country)
+
+        ret = dfs(graph, N, country, tmp)
+
+        graph[key].insert(idx, country)
+
+        if ret:
+            return ret
 
 
-bfs(graph, 'A')
+def solution(tickets):
+    answer = []
 
-print(bfs(graph, 'A'))
+    graph = defaultdict(list)
+
+    N = len(tickets)
+    for ticket in tickets:
+        graph[ticket[0]].append(ticket[1])
+        graph[ticket[0]].sort()
+
+    answer = dfs(graph, N, "ICN", ["ICN"])
+
+    return answer
+
+print(solution([["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]]))
