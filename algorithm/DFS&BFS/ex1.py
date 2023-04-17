@@ -1,38 +1,49 @@
-from collections import defaultdict
+from collections import deque
 
 
-def dfs(graph, N, key, footprint):
-    print(footprint)
+def solution(maps):
+    answer = 0
 
-    if len(footprint) == N + 1:
-        return footprint
+    answer = bfs(0, 0, maps)
 
-    for idx, country in enumerate(graph[key]):
-        graph[key].pop(idx)
-
-        tmp = footprint[:]
-        tmp.append(country)
-
-        ret = dfs(graph, N, country, tmp)
-
-        graph[key].insert(idx, country)
-
-        if ret:
-            return ret
-
-
-def solution(tickets):
-    answer = []
-
-    graph = defaultdict(list)
-
-    N = len(tickets)
-    for ticket in tickets:
-        graph[ticket[0]].append(ticket[1])
-        graph[ticket[0]].sort()
-
-    answer = dfs(graph, N, "ICN", ["ICN"])
+    if (answer == 1):
+        answer = -1
 
     return answer
 
-print(solution([["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]]))
+
+def bfs(x, y, maps):
+    n = len(maps)
+    m = len(maps[0])
+
+    #상,하,좌,우
+    dx = [-1, 1, 0, 0]
+    dy = [0, 0, -1, 1]
+
+    queue = deque()
+    queue.append((x, y))
+
+    while queue:
+        x, y = queue.popleft()
+
+        for i in range(4):
+            nx = x+dx[i]
+            ny = y+dy[i]
+
+            if (nx < 0 or ny < 0 or nx >= n or ny >= m):
+                continue
+
+            if maps[nx][ny] == 0:
+                continue
+
+            if maps[nx][ny] == 1:
+                maps[nx][ny] = maps[x][y]+1
+                queue.append((nx, ny))
+
+    return maps[n-1][m-1]
+
+
+n = solution([[1, 0, 1, 1, 1], [1, 0, 1, 0, 1], [
+             1, 0, 1, 1, 1], [1, 1, 1, 0, 1], [0, 0, 0, 0, 1]])
+
+print(n)
