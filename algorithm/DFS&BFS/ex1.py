@@ -1,49 +1,26 @@
-from collections import deque
-
-
-def solution(maps):
+def solution(board):
     answer = 0
-
-    answer = bfs(0, 0, maps)
-
-    if (answer == 1):
-        answer = -1
-
-    return answer
-
-
-def bfs(x, y, maps):
-    n = len(maps)
-    m = len(maps[0])
+    warning = [[True]*len(board) for _ in range(len(board))]
 
     #상,하,좌,우
-    dx = [-1, 1, 0, 0]
-    dy = [0, 0, -1, 1]
+    dx = [-1, 1, 0, 0, 1, 1, -1, -1]
+    dy = [0, 0, -1, 1, -1, 1, -1, 1]
 
-    queue = deque()
-    queue.append((x, y))
+    for x in range(len(board)):
+        for y in range(len(board)):
+            if (board[x][y] == 1):
+                warning[x][y] = False
 
-    while queue:
-        x, y = queue.popleft()
+                for i in range(8):
+                    nx = x + dx[i]
+                    ny = y + dy[i]
 
-        for i in range(4):
-            nx = x+dx[i]
-            ny = y+dy[i]
+                    if (0 <= nx < len(board) and 0 <= ny < len(board)):
+                        warning[nx][ny] = False
 
-            if (nx < 0 or ny < 0 or nx >= n or ny >= m):
-                continue
+    for i in warning:
+        for j in i:
+            if (j == True):
+                answer += 1
 
-            if maps[nx][ny] == 0:
-                continue
-
-            if maps[nx][ny] == 1:
-                maps[nx][ny] = maps[x][y]+1
-                queue.append((nx, ny))
-
-    return maps[n-1][m-1]
-
-
-n = solution([[1, 0, 1, 1, 1], [1, 0, 1, 0, 1], [
-             1, 0, 1, 1, 1], [1, 1, 1, 0, 1], [0, 0, 0, 0, 1]])
-
-print(n)
+    return answer
