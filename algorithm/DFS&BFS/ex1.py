@@ -1,26 +1,62 @@
-def solution(board):
+import copy
+
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+
+
+def dfs(i, j, graph, position, n, num):
+    res = [position]
+
+    for k in range(4):
+        nx, ny = i + dx[k], j + dy[k]
+
+        if 0 <= nx < n and 0 <= ny < n and graph[nx][ny] == num:
+            graph[nx][ny] = 2
+            res = res + dfs(nx, ny, graph,
+                            [position[0]+dx[k], position[1]+dy[k]], n, num)
+
+    return res
+
+
+def rotate(lst):
+    n = len(lst)
+
+    o = [[0]*n for _ in range(n)]
+
+    for i in range(n):
+        for j in range(n):
+            o[j][n-1-i] = lst[i][j]
+    return o
+
+
+def solution(game_board, table):
     answer = 0
-    warning = [[True]*len(board) for _ in range(len(board))]
+    n = len(game_board)
+    game_board_copy = copy.deepcopy(game_board)
+    block = []
 
-    #상,하,좌,우
-    dx = [-1, 1, 0, 0, 1, 1, -1, -1]
-    dy = [0, 0, -1, 1, -1, 1, -1, 1]
+    for i in range(n):
+        for j in range(n):
+            if game_board_copy[i][j] == 0:
+                game_board_copy[i][j] = 2
+                result = dfs(i, j, game_board_copy, [0, 0], n, 0)[1:]
+                block.append(result)
 
-    for x in range(len(board)):
-        for y in range(len(board)):
-            if (board[x][y] == 1):
-                warning[x][y] = False
+    for r in range(4):
+        table = rotate(table)
+        table_rotate_copy = copy.deepcopy(table)
 
-                for i in range(8):
-                    nx = x + dx[i]
-                    ny = y + dy[i]
+        for i in range(n):
+            for j in range(n):
+                if table_rotate_copy[i][j] == 1:
+                    table_rotate_copy[i][j] = 2
+                    result = dfs(i, j, table_rotate_copy, [0, 0], n, 1)[1:]
+                    if result in block:
 
-                    if (0 <= nx < len(board) and 0 <= ny < len(board)):
-                        warning[nx][ny] = False
-
-    for i in warning:
-        for j in i:
-            if (j == True):
-                answer += 1
+                        block.pop(block.index(result))
+                        answer += (len(result)+1)
+                        table = copy.deepcopy(table_rotate_copy)
+                    else:
+                        table_rotate_copy = copy.deepcopy(table)
 
     return answer
