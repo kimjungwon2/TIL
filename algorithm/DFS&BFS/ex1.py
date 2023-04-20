@@ -1,62 +1,29 @@
-import copy
-
-dx = [-1, 1, 0, 0]
-dy = [0, 0, -1, 1]
+from collections import deque
 
 
-def dfs(i, j, graph, position, n, num):
-    res = [position]
-
-    for k in range(4):
-        nx, ny = i + dx[k], j + dy[k]
-
-        if 0 <= nx < n and 0 <= ny < n and graph[nx][ny] == num:
-            graph[nx][ny] = 2
-            res = res + dfs(nx, ny, graph,
-                            [position[0]+dx[k], position[1]+dy[k]], n, num)
-
-    return res
-
-
-def rotate(lst):
-    n = len(lst)
-
-    o = [[0]*n for _ in range(n)]
-
-    for i in range(n):
-        for j in range(n):
-            o[j][n-1-i] = lst[i][j]
-    return o
-
-
-def solution(game_board, table):
+def solution(n, computers):
     answer = 0
-    n = len(game_board)
-    game_board_copy = copy.deepcopy(game_board)
-    block = []
+
+    visited = [False]*(n+1)
 
     for i in range(n):
-        for j in range(n):
-            if game_board_copy[i][j] == 0:
-                game_board_copy[i][j] = 2
-                result = dfs(i, j, game_board_copy, [0, 0], n, 0)[1:]
-                block.append(result)
-
-    for r in range(4):
-        table = rotate(table)
-        table_rotate_copy = copy.deepcopy(table)
-
-        for i in range(n):
-            for j in range(n):
-                if table_rotate_copy[i][j] == 1:
-                    table_rotate_copy[i][j] = 2
-                    result = dfs(i, j, table_rotate_copy, [0, 0], n, 1)[1:]
-                    if result in block:
-
-                        block.pop(block.index(result))
-                        answer += (len(result)+1)
-                        table = copy.deepcopy(table_rotate_copy)
-                    else:
-                        table_rotate_copy = copy.deepcopy(table)
+        if (visited[i] == False):
+            bfs(i, computers, visited)
+            answer += 1
 
     return answer
+
+
+def bfs(node, computers, visited):
+    queue = deque()
+    queue.append(node)
+
+    while queue:
+        node = queue.popleft()
+
+        for index, i in enumerate(computers[node]):
+            if (visited[index] == False and i == 1):
+                visited[index] = True
+                queue.append(index)
+
+    return 0
