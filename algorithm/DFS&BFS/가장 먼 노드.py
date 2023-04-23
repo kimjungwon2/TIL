@@ -1,3 +1,4 @@
+from collections import deque
 def solution(n, edge):
 
     adj = [[] for _ in range(n+1)]

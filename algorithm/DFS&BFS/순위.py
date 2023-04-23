@@ -17,4 +17,5 @@ def solution(n, results):
     for row in board:
         if row.count(0) == 1:
             answer += 1
+            
     return answer
