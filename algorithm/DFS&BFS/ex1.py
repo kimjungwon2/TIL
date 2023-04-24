@@ -1,29 +1,29 @@
 from collections import deque
 
-
-def solution(n, computers):
-    answer = 0
-
-    visited = [False]*(n+1)
-
-    for i in range(n):
-        if (visited[i] == False):
-            bfs(i, computers, visited)
-            answer += 1
-
-    return answer
+graph = {
+    'A': ['B', 'D', 'E'],
+    'B': ['A', 'C', 'D'],
+    'C': ['B'],
+    'D': ['A', 'B'],
+    'E': ['A']
+}
 
 
-def bfs(node, computers, visited):
-    queue = deque()
-    queue.append(node)
+def bfs(graph, start):
+    queue = deque(start)
+    visited = [start]
 
     while queue:
-        node = queue.popleft()
+        current = queue.popleft()
 
-        for index, i in enumerate(computers[node]):
-            if (visited[index] == False and i == 1):
-                visited[index] = True
-                queue.append(index)
+        for next_v in graph[current]:
+            if next_v not in visited:
+                queue.append(next_v)
+                visited.append(next_v)
 
-    return 0
+    return visited
+
+
+bfs(graph, 'A')
+
+print(bfs(graph, 'A'))
