@@ -1,58 +1,59 @@
 from collections import deque
+import sys
 import copy
+
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+lab = [list(map(int, input().split())) for _ in range(N)]
+
+answer = 0
+
+dx, dy = [0, 0, -1, 1], [-1, 1, 0, 0]
 
 
 def bfs():
+    global answer
     queue = deque()
-    tmp_graph = copy.deepcopy(graph)
-    for i in range(n):
-        for j in range(m):
-            if tmp_graph[i][j] == 2:
+    lab2 = copy.deepcopy(lab)
+
+    #바이러스 있는 곳부터 시작
+    for i in range(N):
+        for j in range(M):
+            if lab2[i][j] == 2:
                 queue.append((i, j))
 
     while queue:
-        x, y = queue.popleft()
+        px, py = queue.popleft()
 
-        for i in range(4):
-            nx = x + dx[i]
-            ny = y + dy[i]
-
-            if nx < 0 or nx >= n or ny < 0 or ny >= m:
-                continue
-            if tmp_graph[nx][ny] == 0:
-                tmp_graph[nx][ny] = 2
-                queue.append((nx, ny))
+        for k in range(4):
+            nx = px+dx[k]
+            ny = py+dy[k]
+            if (0 <= nx < N and 0 <= ny < M):
+                if lab2[nx][ny] == 0:
+                    lab2[nx][ny] = 2
+                    queue.append((nx, ny))
 
     global answer
     cnt = 0
-
-    for i in range(n):
-        cnt += tmp_graph[i].count(0)
+    for i in range(N):
+        cnt += lab2[i].count(0)
 
     answer = max(answer, cnt)
 
 
-def makeWall(cnt):
+def wall(cnt):
     if cnt == 3:
         bfs()
         return
 
-    for i in range(n):
-        for j in range(m):
-            if graph[i][j] == 0:
-                graph[i][j] = 1
-                makeWall(cnt+1)
-                graph[i][j] = 0
+    for i in range(N):
+        for j in range(M):
+            if lab[i][j] == 0:
+                lab[i][j] = 1
+                wall(cnt+1)
+                lab[i][j] = 0
 
 
-n, m = map(int, input().split())
-graph = []
-dx = [0, 0, 1, -1]
-dy = [1, -1, 0, 0]
-
-for i in range(n):
-    graph.append(list(map(int, input().split())))
-
-answer = 0
-makeWall(0)
+wall(0)
 print(answer)
