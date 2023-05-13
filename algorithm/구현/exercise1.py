@@ -1,22 +1,56 @@
-n=int(input())
-x,y = 1,1
-plans  = input().split()
+import sys
+from collections import deque
+import copy
 
-#L,R,U,D
-dx = [0,0,-1,1]
-dy = [-1,1,0,0]
-move_types = ['L','R','U','D']
+input = sys.stdin.readline
+N, M = map(int,input().split())
+lab = [ list(map(int,input().split())) for _ in range(N)]
 
-#이동 계획을 하나씩 확인하기
-for plan in plans:
-    for i in range(len(move_types)):
-        if plan == move_types[i]:
+# 0, 1벽, 2바이러스
+answer = 0
+dx,dy=[0,0,1,-1],[1,-1,0,0]
+
+def wall(x):
+    global answer
+
+    if(x==3):
+        answer = max(answer, bfs())
+        return
+    
+    for i in range(N):
+        for j in range(M):
+            if lab[i][j]==0:
+                lab[i][j]=1
+                wall(x+1)
+                lab[i][j]=0
+
+def bfs():
+    queue =deque()
+
+    size = 0
+    lab2 = copy.deepcopy(lab)
+
+    for i in range(N):
+        for j in range(M):
+            if lab2[i][j]==2:
+                queue.append((i,j))
+
+    while queue:
+        x,y = queue.popleft()
+
+        for i in range(4):
             nx = x+dx[i]
             ny = y+dy[i]
-    #공간을 벗어나면 무시하라
-    if nx<1 or ny <1 or nx>n or ny >n:
-        continue
-    #이동 수행    
-    x,y = nx,ny
 
-print(x,y)
+            if 0<=nx<N and 0<=ny<M:
+                if lab2[nx][ny]==0:
+                    lab2[nx][ny]=2
+                    queue.append((nx,ny))
+
+    for i in range(N):
+        size+= lab2[i].count(0)
+    
+    return size
+
+wall(0)
+print(answer)
