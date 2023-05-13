@@ -13,7 +13,7 @@ dx, dy = [0, 0, -1, 1], [-1, 1, 0, 0]
 
 
 def bfs():
-    global answer
+    
     queue = deque()
     lab2 = copy.deepcopy(lab)
 
