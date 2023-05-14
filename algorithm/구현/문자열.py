@@ -41,3 +41,5 @@ s = 123213
 print('문자열')
 for i in str(s):
     print(i)
+
+
