@@ -24,3 +24,14 @@ while (True):
 
 s = [3, 5, 11, 3]
 print(list(map(str, s)))
+
+
+d = '32345'
+
+for i in d:
+    print(i)
+
+print('리스트')
+
+for i in s:
+    print(i)
