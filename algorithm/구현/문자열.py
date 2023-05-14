@@ -35,3 +35,9 @@ print('리스트')
 
 for i in s:
     print(i)
+
+s = 123213
+
+print('문자열')
+for i in str(s):
+    print(i)
