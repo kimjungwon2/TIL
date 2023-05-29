@@ -9,11 +9,7 @@ mid = (low+high)//2
 ans =0 
 
 def is_possible(mid):
-    tot = 0 
-    for r in req:
-        tot+=min(r, mid)
-
-    
+    return sum(min(r,mid) for r in req) <=M
 
 while low <=high:
     if is_possible(mid):
@@ -23,3 +19,5 @@ while low <=high:
         high = mid-1
 
     mid =(low+high)//2 
+
+print(ans)
