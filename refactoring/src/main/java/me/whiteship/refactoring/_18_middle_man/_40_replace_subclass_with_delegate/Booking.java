@@ -21,7 +21,6 @@ public class Booking {
     }
 
     public static Booking createPremiumBooking(Show show,LocalDateTime time,PremiumExtra extra){
-
         Booking booking =  createBooking(show,time);
         booking.premiumDelegate = new PremiumDelegate(booking,extra);
         return booking;
