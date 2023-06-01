@@ -1,6 +1,7 @@
 package sample.cafekiosk;
 
 import java.time.LocalDateTime;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import sample.cafekiosk.unit.CafeKiosk;
 import sample.cafekiosk.unit.beverage.Americano;
@@ -9,10 +10,11 @@ import sample.cafekiosk.unit.order.Order;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.springframework.util.Assert.isInstanceOf;
-
 
 class CafekioskApplicationTests {
+
+
+
 
     @Test
     void add_manual() {
@@ -24,6 +26,7 @@ class CafekioskApplicationTests {
     }
 
     @Test
+    @DisplayName("음료 1개 추가 테스트")
     void add() {
         CafeKiosk cafeKiosk = new CafeKiosk();
         cafeKiosk.add(new Americano());
