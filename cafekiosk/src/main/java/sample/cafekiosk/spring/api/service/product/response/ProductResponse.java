@@ -2,7 +2,7 @@ package sample.cafekiosk.spring.api.service.product.response;
 
 import lombok.Builder;
 import lombok.Getter;
-import sample.cafekiosk.spring.domain.product.ProdcutType;
+import sample.cafekiosk.spring.domain.product.ProductType;
 import sample.cafekiosk.spring.domain.product.Product;
 import sample.cafekiosk.spring.domain.product.ProductSellingStatus;
 
@@ -14,7 +14,7 @@ public class ProductResponse {
     private String productNumber;
 
 
-    private ProdcutType type;
+    private ProductType type;
 
 
     private ProductSellingStatus sellingStatus;
@@ -22,7 +22,7 @@ public class ProductResponse {
     private int price;
 
     @Builder
-    private ProductResponse(Long id, String productNumber, ProdcutType type,
+    private ProductResponse(Long id, String productNumber, ProductType type,
             ProductSellingStatus sellingStatus, String name, int price) {
         this.id = id;
         this.productNumber = productNumber;
