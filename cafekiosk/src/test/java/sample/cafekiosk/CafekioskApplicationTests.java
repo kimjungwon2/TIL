@@ -13,9 +13,6 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class CafekioskApplicationTests {
 
-
-
-
     @Test
     void add_manual() {
         CafeKiosk cafeKiosk = new CafeKiosk();
