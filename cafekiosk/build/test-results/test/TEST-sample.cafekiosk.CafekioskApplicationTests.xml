@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sample.cafekiosk.CafekioskApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-31T04:46:32" hostname="DESKTOP-MST95U4" time="0.129">
+  <properties/>
+  <testcase name="음료 1개 추가 테스트" classname="sample.cafekiosk.CafekioskApplicationTests" time="0.129"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
