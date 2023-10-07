@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c4c1687-9ea7-410a-a702-7953384a3b0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/java/stream/stream.iml" afterDir="false" />
+    <list default="true" id="5c4c1687-9ea7-410a-a702-7953384a3b0c" name="Default Changelist" comment="FEAT : 모든 파일 올리기">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka" beforeDir="false" afterPath="$PROJECT_DIR$/kafka" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/src/main/java/com/example/order/OrderApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/order/src/test/java/com/example/order/OrderApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-db-utilize/itemservice-db/src/main/resources/hello/itemservice/repository/mybatis/ItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-db-utilize/itemservice-db/src/main/resources/hello/itemservice/repository/mybatis/ItemMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-db-utilize/itemservice-db/src/test/java/hello/itemservice/domain/ItemRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-db-utilize/itemservice-db/src/test/java/hello/itemservice/domain/ItemRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,12 +30,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/mac20010/Users/Practice",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,8 +48,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665483645079</updated>
+      <workItem from="1695533774435" duration="242000" />
+      <workItem from="1695723117472" duration="30000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -44,6 +66,9 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FEAT : 모든 파일 올리기" />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT : 모든 파일 올리기" />
   </component>
 </project>
