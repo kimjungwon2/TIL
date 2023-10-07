@@ -1,0 +1,29 @@
+# Use the official image as parent image.
+# 베이스가 될 이미지. 로컬레파지토리에 존재하지 않을경우 도커허브에서 당겨옴
+FROM node:current-slim
+
+# Set the working directory.
+# 이미지 내의 작업폴더 셋팅
+WORKDIR /app
+
+# Copy the files from your host to your current location.
+# 호스트 컴퓨터에서 이미지로 복사할 파일 셋팅
+# 앞의 . 은 호스트 컴퓨터의 모든 파일을 의미
+# 뒤의 . 은 타겟 이미지 작업폴더의 모든 파일을 의미
+COPY . .
+
+# Run the command inside your image file system.
+# 이미지 파일 시스템에서 실행해야할 커맨드 (RUN 이후의 명령어를 실행)
+# 이미지 내에 npm 설치 (컨테이너 생성 이전에 이미지에 npm 을 먼저 설치)
+RUN npm install
+
+# Inform Docker that the container is listening on the specified port at runtime.
+# 이미지가 실행되는 동안 도커 컨테이너가 대기하는 포트 번호를 명시
+EXPOSE 3000
+
+# Run the specified commend within the container.
+# 컨테이너 위에서 실행할 명령어
+CMD [ "npm", "start"]
+
+
+

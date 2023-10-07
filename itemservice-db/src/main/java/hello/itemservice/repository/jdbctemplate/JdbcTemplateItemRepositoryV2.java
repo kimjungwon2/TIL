@@ -1,9 +1,15 @@
 package hello.itemservice.repository.jdbctemplate;
 
+
 import hello.itemservice.domain.Item;
 import hello.itemservice.repository.ItemRepository;
 import hello.itemservice.repository.ItemSearchCond;
 import hello.itemservice.repository.ItemUpdateDto;
+import java.sql.PreparedStatement;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import javax.sql.DataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -17,23 +23,10 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.util.StringUtils;
 
-import javax.sql.DataSource;
-import java.sql.PreparedStatement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
 /**
  * NamedParameterJdbcTemplate
- * SqlParameterSource
- * - BeanPropertySqlParameterSource
- * - MapSqlParameterSource
- * Map
- *
- * BeanPropertyRowMapper
- *
  */
+
 @Slf4j
 public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
 
@@ -45,44 +38,51 @@ public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
 
     @Override
     public Item save(Item item) {
-        String sql = "insert into item(item_name, price, quantity) " +
-                "values (:itemName, :price, :quantity)";
+        String sql = "insert into item (item_name, price, quantity) "
+                + "values (:itemName, :price,:quantity)";
 
         SqlParameterSource param = new BeanPropertySqlParameterSource(item);
 
         KeyHolder keyHolder = new GeneratedKeyHolder();
-        template.update(sql, param, keyHolder);
+        template.update(sql,param,keyHolder);
 
         long key = keyHolder.getKey().longValue();
         item.setId(key);
+
         return item;
     }
 
     @Override
     public void update(Long itemId, ItemUpdateDto updateParam) {
-        String sql = "update item " +
-                "set item_name=:itemName, price=:price, quantity=:quantity " +
-                "where id=:id";
+        String sql = "update item "
+                + "set item_name=:itemName, price=:price, quantity=:quantity "
+                + "where id=:id";
 
-        SqlParameterSource param = new MapSqlParameterSource()
-                .addValue("itemName", updateParam.getItemName())
+        SqlParameterSource param = new MapSqlParameterSource().addValue(
+                        "itemName", updateParam.getItemName())
                 .addValue("price", updateParam.getPrice())
                 .addValue("quantity", updateParam.getQuantity())
-                .addValue("id", itemId); //이 부분이 별도로 필요하다.
+                .addValue("id", itemId);
 
-        template.update(sql, param);
+        template.update(sql,param);
     }
 
     @Override
     public Optional<Item> findById(Long id) {
+
         String sql = "select id, item_name, price, quantity from item where id = :id";
-        try {
+
+        try{
             Map<String, Object> param = Map.of("id", id);
             Item item = template.queryForObject(sql, param, itemRowMapper());
             return Optional.of(item);
-        } catch (EmptyResultDataAccessException e) {
+        } catch(EmptyResultDataAccessException e){
             return Optional.empty();
         }
+    }
+
+    private RowMapper<Item> itemRowMapper() {
+        return BeanPropertyRowMapper.newInstance(Item.class); // camel 변환 지원
     }
 
     @Override
@@ -93,29 +93,24 @@ public class JdbcTemplateItemRepositoryV2 implements ItemRepository {
         SqlParameterSource param = new BeanPropertySqlParameterSource(cond);
 
         String sql = "select id, item_name, price, quantity from item";
+
         //동적 쿼리
         if (StringUtils.hasText(itemName) || maxPrice != null) {
             sql += " where";
         }
-
         boolean andFlag = false;
         if (StringUtils.hasText(itemName)) {
             sql += " item_name like concat('%',:itemName,'%')";
             andFlag = true;
         }
-
         if (maxPrice != null) {
             if (andFlag) {
                 sql += " and";
             }
             sql += " price <= :maxPrice";
         }
-
         log.info("sql={}", sql);
-        return template.query(sql, param, itemRowMapper());
-    }
 
-    private RowMapper<Item> itemRowMapper() {
-        return BeanPropertyRowMapper.newInstance(Item.class); //camel 변환 지원
+        return template.query(sql, param, itemRowMapper());
     }
 }

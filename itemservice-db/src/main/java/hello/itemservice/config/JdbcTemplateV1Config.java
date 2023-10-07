@@ -5,11 +5,10 @@ import hello.itemservice.repository.jdbctemplate.JdbcTemplateItemRepositoryV1;
 import hello.itemservice.repository.memory.MemoryItemRepository;
 import hello.itemservice.service.ItemService;
 import hello.itemservice.service.ItemServiceV1;
+import javax.sql.DataSource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.sql.DataSource;
 
 @Configuration
 @RequiredArgsConstructor
@@ -26,5 +25,4 @@ public class JdbcTemplateV1Config {
     public ItemRepository itemRepository() {
         return new JdbcTemplateItemRepositoryV1(dataSource);
     }
-
 }

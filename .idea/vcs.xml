@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+<<<<<<< HEAD
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/delivery" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kafka" vcs="Git" />
@@ -9,5 +10,9 @@
     <mapping directory="$PROJECT_DIR$/redis-practice" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/spring-db" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/spring-db-utilize" vcs="Git" />
+=======
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+>>>>>>> e0c2950282b3337f2ec3aecd90b162909ca4774c
   </component>
 </project>
