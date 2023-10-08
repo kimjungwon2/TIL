@@ -1,25 +1,19 @@
-ans = 0
+from itertools import permutations
 
 
 def solution(k, dungeons):
-    answer = 0
+    answer = -1
     length = len(dungeons)
-    visited = [False] * length
 
-    recur(k, dungeons, length, visited, answer)
+    perm = permutations(dungeons, length)
 
-    return ans
+    for p in perm:
+        have = k
+        count = 0
+        for i in range(length):
+            if (have >= p[i][0] and have >= p[i][1]):
+                have -= p[i][1]
+                count += 1
+        answer = max(answer, count)
 
-
-def recur(k, dungeons, length, visited, answer):
-    global ans
-    ans = max(ans, answer)
-
-    for i in range(length):
-        if (k >= dungeons[i][0] and visited[i] == False):
-            visited[i] = True
-
-            recur(k-dungeons[i][1], dungeons, length, visited, answer+1)
-
-            #다시 위로 올라가기
-            visited[i] = False
+    return answer
