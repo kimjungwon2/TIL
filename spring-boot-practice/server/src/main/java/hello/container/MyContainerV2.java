@@ -4,6 +4,7 @@ import jakarta.servlet.ServletContainerInitializer;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.HandlesTypes;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Set;
 
 
@@ -15,5 +16,18 @@ public class MyContainerV2 implements ServletContainerInitializer {
         System.out.println("MyContainerV2.onStartup");
         System.out.println("MyContainerV2 c = "+c);
         System.out.println("MyContainerV2 ctx = "+ctx);
+
+        // class hello.container
+        for (Class<?> appInitClass : c) {
+            try {
+                AppInit appInit = (AppInit) appInitClass.getDeclaredConstructor().newInstance();
+                appInit.onStartup(ctx);
+
+
+
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 }
