@@ -20,14 +20,13 @@ public class MyContainerV2 implements ServletContainerInitializer {
         // class hello.container
         for (Class<?> appInitClass : c) {
             try {
+                //new AppInitV1Servlet()과 같은 코드
                 AppInit appInit = (AppInit) appInitClass.getDeclaredConstructor().newInstance();
                 appInit.onStartup(ctx);
-
-
-
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+
         }
     }
 }
