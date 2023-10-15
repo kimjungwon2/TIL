@@ -14,6 +14,7 @@ repositories {
 dependencies {
     //서블릿
     implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
 tasks.named('test') {
