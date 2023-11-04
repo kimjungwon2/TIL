@@ -5,7 +5,6 @@ import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.*;
 
 public class MapGet {
 
@@ -33,7 +32,6 @@ public class MapGet {
                 linkedHashMap.put(loop,tempData);
             }
 
-            keys = RandomKeyUtil.generateRandomNumberKeysSwap(LOOP_COUNT);
 
         }
     }
