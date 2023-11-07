@@ -13,9 +13,6 @@ public class BadQueryManager {
 
     public static String getSql(String idSql){
         try{
-            FileReader reader = new FileReader(idSql);
-            HashMap<String,String> document = reader.read(queryURL);
-            return document.get(idSql);
         } catch(Exception ex){
             System.out.println(ex);
         }
