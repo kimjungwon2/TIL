@@ -9,6 +9,7 @@ public class InterruptSample {
         System.out.println("isInterrupted=" + infinit.isInterrupted());
         infinit.interrupt();
         System.out.println("isInterrupted="+infinit.isInterrupted());
+        infinit.setFlag(false);
     }
 
 }

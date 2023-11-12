@@ -12,6 +12,16 @@ public class InfinitThread extends Thread{
                 value = Integer.MIN_VALUE;
                 System.out.println("MAX_VALUE reached !!! ");
             }
+            try{
+                Thread.sleep(0,1);
+            }catch(Exception e){
+                break;
+            }
         }
     }
+
+    public void setFlag(boolean flag){
+        this.flag = flag;
+    }
+
 }
