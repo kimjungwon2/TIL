@@ -1,5 +1,6 @@
 package org.example.io;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -62,6 +63,27 @@ public class BasicIOReadUtil {
 
         return fileName;
     }
+
+    public static ArrayList<String> readBufferedReader(String fileName) throws  Exception{
+        ArrayList<String> list = new ArrayList<>();
+        BufferedReader br = null;
+
+        try{
+            br = new BufferedReader(new FileReader(fileName));
+            String data;
+            while((data =br.readLine())!=null){
+                list.add(data);
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+            throw e;
+        } finally{
+            if(br!=null) br.close();
+        }
+
+        return list;
+    }
+
 
     public static void main(String[] args) throws Exception{
         String fileName = "C:\\10MBFile";
