@@ -36,12 +36,34 @@ public class BasicIOReadUtil {
         return list;
     }
 
+    public static String readCharStreamWithBuffer(String fileName) throws Exception{
+        StringBuffer retSB = new StringBuffer();
+        FileReader fr = null;
+
+        try{
+            fr = new FileReader(fileName);
+            int bufferSize = 1024*1024;
+            char readBuffer[] = new char[bufferSize];
+            int resultSize = 0;
+
+            while((resultSize = fr.read(readBuffer))!=-1){
+                if(resultSize==bufferSize){
+                    retSB.append(readBuffer);
+                } else{
+                    for(int loop=0;loop<resultSize;loop++){
+                        retSB.append(readBuffer[loop]);
+                    }
+                }
+            }
+            return retSB.toString();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        return fileName;
+    }
+
     public static void main(String[] args) throws Exception{
         String fileName = "C:\\10MBFile";
-        StopWatch sw = new StopWatch();
-        sw.start();
-        ArrayList vlist1= BasicIOReadUtil.readCharStream(fileName);
-        System.out.println(sw);
-        System.out.println(list1.size());
     }
 }
