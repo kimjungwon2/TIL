@@ -4,6 +4,8 @@ management:
       enabled: true
     os:
       enabled: true
+    server:
+      port: 9292
 
   endpoint:
     shutdown:
