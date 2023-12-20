@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47827923-1dd7-44c2-a3b4-f199ee31d1cb" name="Changes" comment="FEAT: 초기화 시점 트랜잭션 AOP">
-      <change afterPath="$PROJECT_DIR$/springtx/src/test/java/com/example/springtx/apply/InitTxTest.java" afterDir="false" />
+    <list default="true" id="47827923-1dd7-44c2-a3b4-f199ee31d1cb" name="Changes" comment="FEAT: 예외와 트랜잭션 커밋, 롤백 - 기본.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +39,8 @@
       <workItem from="1702915787694" duration="113000" />
       <workItem from="1702916653510" duration="18000" />
       <workItem from="1702999016114" duration="36000" />
+      <workItem from="1702999886261" duration="92000" />
+      <workItem from="1703083757837" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="FEAT: 트랜잭션 적용 위치.">
       <created>1702914268253</created>
@@ -62,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702916668177</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="FEAT: 예외와 트랜잭션 커밋, 롤백 - 기본.">
+      <created>1702999916408</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702999916408</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,6 +81,7 @@
     <MESSAGE value="FEAT: 프록시 내부 호출1" />
     <MESSAGE value="FEAT: 프록시 내부 호출2" />
     <MESSAGE value="FEAT: 초기화 시점 트랜잭션 AOP" />
-    <option name="LAST_COMMIT_MESSAGE" value="FEAT: 초기화 시점 트랜잭션 AOP" />
+    <MESSAGE value="FEAT: 예외와 트랜잭션 커밋, 롤백 - 기본." />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT: 예외와 트랜잭션 커밋, 롤백 - 기본." />
   </component>
 </project>
