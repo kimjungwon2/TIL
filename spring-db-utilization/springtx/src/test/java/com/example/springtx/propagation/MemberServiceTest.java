@@ -1,6 +1,9 @@
 package com.example.springtx.propagation;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
@@ -37,5 +40,20 @@ class MemberServiceTest {
 
       //then
         assertFalse(memberRepository.find(username).isEmpty());
+    }
+
+    @DisplayName("")
+    @Test
+    void outerTxOff_fail(){
+        //given
+        String username = "로그예외_outerTxOff_fail";
+
+        //when
+        assertThatThrownBy(()->memberService.joinV1(username))
+                .isInstanceOf(RuntimeException.class);
+
+        //then
+        assertTrue(memberRepository.find(username).isPresent());
+        assertTrue(logRepository.find(username).isEmpty());
     }
 }
