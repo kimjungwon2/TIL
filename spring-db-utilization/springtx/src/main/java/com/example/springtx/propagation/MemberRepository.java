@@ -21,6 +21,7 @@ public class MemberRepository {
     }
 
     public Optional<Member> find(String username){
+        log.info("Member find 시작");
         return em.createQuery("select m from Member m where m.username =:username",Member.class)
                 .setParameter("username",username)
                 .getResultList().stream().findAny();
