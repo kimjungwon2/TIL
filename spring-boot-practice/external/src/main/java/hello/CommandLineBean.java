@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Set;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 @Slf4j
-@ComponentScan
+@Component
 public class CommandLineBean {
 
     private final ApplicationArguments arguments;

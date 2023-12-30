@@ -14,7 +14,7 @@ public class CommandLineV2 {
             log.info("arg {}", arg);
         }
 
-        ApplicationArguments appArgs = new DefaultApplicationArguments();
+        ApplicationArguments appArgs = new DefaultApplicationArguments(args);
         log.info("SourceArgs = {}", List.of(appArgs.getSourceArgs()));
         log.info("NonOptionsArgs = {}", appArgs.getNonOptionArgs());
         log.info("OptionsNames = {}", appArgs.getOptionNames());
