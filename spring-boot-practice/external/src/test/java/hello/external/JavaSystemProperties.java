@@ -15,7 +15,7 @@ public class JavaSystemProperties {
 
         String url = System.getProperty("url");
         String username = System.getProperty("username");
-        String password = System.getProperty("username");
+        String password = System.getProperty("password");
 
         log.info("url={}",url);
         log.info("username={}",username);
