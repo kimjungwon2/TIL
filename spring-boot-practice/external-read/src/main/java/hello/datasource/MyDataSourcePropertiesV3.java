@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
+import org.hibernate.validator.constraints.time.DurationMax;
 import org.hibernate.validator.constraints.time.DurationMin;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.bind.DefaultValue;
@@ -37,7 +38,7 @@ public class MyDataSourcePropertiesV3 {
         @Min(1) @Max(999)
         private int maxConnection;
         @DurationMin(seconds=1)
-        @DurationMin(seconds=60)
+        @DurationMax(seconds=60)
         private Duration timeout;
         private List<String> options = new ArrayList<>();
 
