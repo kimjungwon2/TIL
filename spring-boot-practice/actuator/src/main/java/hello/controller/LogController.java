@@ -13,7 +13,8 @@ public class LogController {
         log.trace("trace log");
         log.debug("debug log");
         log.info("info log");
-        log.warn("error log");
+        log.warn("warn log");
+        log.error("error log");
 
         return "ok";
     }
