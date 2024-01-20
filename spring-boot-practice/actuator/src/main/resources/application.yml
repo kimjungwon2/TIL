@@ -11,7 +11,8 @@ management:
       enabled: true
     health:
       show-details: always
-
+  server:
+    port: 9292
 
   endpoints:
     web:
