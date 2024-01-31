@@ -27,10 +27,13 @@ public class FieldServiceTest {
 
       //when
       threadA.start();
-      sleep(2000);
+//      sleep(2000); // 동시성 문제 발생 X
+        sleep(100); //동시성 문제 발생O
       threadB.start();
 
       //then
+        sleep(3000);
+        log.info("main exit");
     }
 
     private void sleep(int millis){
