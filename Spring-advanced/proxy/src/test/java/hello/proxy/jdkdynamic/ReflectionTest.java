@@ -1,5 +1,7 @@
 package hello.proxy.jdkdynamic;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
@@ -32,5 +34,22 @@ public class ReflectionTest {
             log.info("callB");
             return "B";
         }
+    }
+
+    @Test
+    void reflection1()
+            throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Class classHello = Class.forName("hello.proxy.jdkdynamic.ReflectionTest$Hello");
+        Hello target = new Hello();
+
+        //callA 메서드 정보.
+        Method methodCallA = classHello.getMethod("callA");
+        Object result1 = methodCallA.invoke(target);
+        log.info("result1:{}",result1);
+
+        //callA 메서드 정보.
+        Method methodCallB = classHello.getMethod("callB");
+        Object result2 = methodCallB.invoke(target);
+        log.info("result1:{}",result2);
     }
 }
