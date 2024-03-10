@@ -5,7 +5,6 @@ import hello.proxy.trace.TraceStatus;
 import hello.proxy.trace.logtrace.LogTrace;
 import lombok.RequiredArgsConstructor;
 
-@RequiredArgsConstructor
 public class OrderRepositoryConcreteProxy extends OrderRepositoryV2 {
 
     private final OrderRepositoryV2 target;
@@ -15,6 +14,7 @@ public class OrderRepositoryConcreteProxy extends OrderRepositoryV2 {
         this.target = target;
         this.logTrace = logTrace;
     }
+    // 새로운 생성자
 
     @Override
     public void save(String itemId) {
