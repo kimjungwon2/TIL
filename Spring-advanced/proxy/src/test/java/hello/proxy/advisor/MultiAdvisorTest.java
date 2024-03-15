@@ -56,4 +56,24 @@ public class MultiAdvisorTest {
         }
     }
 
+
+    @DisplayName("여러 프록시")
+    @Test
+    void multiAdvisorTest2(){
+        //given
+        DefaultPointcutAdvisor advisor1 = new DefaultPointcutAdvisor(Pointcut.TRUE, new Advice1());
+        DefaultPointcutAdvisor advisor2 = new DefaultPointcutAdvisor(Pointcut.TRUE, new Advice2());
+
+        //프록시 1 생성
+        ServiceInterface target = new ServiceImpl();
+        ProxyFactory proxyFactory1 = new ProxyFactory(target);
+
+        proxyFactory1.addAdvisor(advisor1);
+        proxyFactory1.addAdvisor(advisor2);
+        ServiceInterface proxy = (ServiceInterface) proxyFactory1.getProxy();
+
+        //실행
+        proxy.save();
+    }
+
 }
