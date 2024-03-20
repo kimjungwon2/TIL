@@ -17,7 +17,7 @@ public class BaiscTest {
     void basicConfig(){
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BasicConfig.class);
 
-        //A는 빈으로 등록된다.
+        //beanA 이름으로 B 객체가 빈으로 등록된다.
         B b = applicationContext.getBean("beanA",B.class);
         b.helloB();
 
