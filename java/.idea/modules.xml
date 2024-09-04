@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/generics/generics.iml" filepath="$PROJECT_DIR$/generics/generics.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java.iml" filepath="$PROJECT_DIR$/.idea/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/lambda/lambda.iml" filepath="$PROJECT_DIR$/lambda/lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reflection.iml" filepath="$PROJECT_DIR$/reflection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reflection.main.iml" filepath="$PROJECT_DIR$/.idea/modules/reflection.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reflection.test.iml" filepath="$PROJECT_DIR$/.idea/modules/reflection.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/stream/stream.iml" filepath="$PROJECT_DIR$/stream/stream.iml" />
     </modules>
   </component>
