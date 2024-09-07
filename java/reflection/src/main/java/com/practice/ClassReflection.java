@@ -1,7 +1,9 @@
 package com.practice;
 
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ClassReflection {
@@ -15,6 +17,14 @@ public class ClassReflection {
         Method[] methods = aClass.getMethods();
         Method[] declaredMethods = aClass.getDeclaredMethods();
         Field[] declaredFields = aClass.getDeclaredFields();
+
+    }
+
+    public void getConstructorByReflection() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        Constructor<?> constructor = Member.class.getDeclaredConstructor();
+        Object object = constructor.newInstance();
+        Member member = (Member) object;
+
 
     }
 }
