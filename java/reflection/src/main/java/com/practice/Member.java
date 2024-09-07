@@ -12,8 +12,12 @@ public class Member {
     public Member() {
     }
 
-    public void getName(String name){
-        this.name = name;
+    public String getName(){
+        return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public void plusAge(int age){

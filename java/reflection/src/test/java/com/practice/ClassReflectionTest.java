@@ -32,4 +32,14 @@ class ClassReflectionTest {
       //when
         classReflection.getFieldReflection();
     }
+
+    @DisplayName("Field 이름 변경하기")
+    @Test
+    void setNameFieldByReflection() throws IllegalAccessException, NoSuchFieldException {
+        //given
+        ClassReflection classReflection = new ClassReflection();
+
+        //when
+        classReflection.setNameFieldByReflection();
+    }
 }

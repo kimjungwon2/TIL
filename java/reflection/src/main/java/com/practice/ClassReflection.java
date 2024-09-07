@@ -41,6 +41,15 @@ public class ClassReflection {
         }
     }
 
+    public void setNameFieldByReflection() throws IllegalAccessException, NoSuchFieldException {
+        Class<Member> aClass = Member.class;
+        Member member = new Member("정원", 30);
 
+        Field name = aClass.getDeclaredField("name");
+        name.setAccessible(true);
+        name.set(member,"hallo");
+
+        System.out.println("member = " +member.getName());
+    }
 
 }
