@@ -1,5 +1,6 @@
 package com.practice;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.InvocationTargetException;
@@ -20,5 +21,15 @@ class ClassReflectionTest {
         ClassReflection classReflection = new ClassReflection();
 
         classReflection.getConstructorByReflection();
+    }
+
+    @DisplayName("Field 획득하기")
+    @Test
+    void getFieldReflection() throws IllegalAccessException {
+      //given
+        ClassReflection classReflection = new ClassReflection();
+
+      //when
+        classReflection.getFieldReflection();
     }
 }

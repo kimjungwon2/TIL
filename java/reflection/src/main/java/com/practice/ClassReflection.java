@@ -27,6 +27,20 @@ public class ClassReflection {
         Object object = constructor.newInstance("John Doe", 30);
         Member member = (Member) object;
 
-        int i = 5;
     }
+
+    public void getFieldReflection() throws IllegalAccessException {
+        Class<Member> aClass = Member.class;
+        Member member = new Member("정원", 30);
+
+        for (Field field : aClass.getDeclaredFields()) {
+            field.setAccessible(true);
+            String fieldInfo = field.getType() + ", " + field.getName() + " = " + field.get(member);
+
+            System.out.println("FieldInfo: " + fieldInfo);
+        }
+    }
+
+
+
 }
