@@ -52,4 +52,14 @@ public class ClassReflection {
         System.out.println("member = " +member.getName());
     }
 
+    public void methodReflection() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Class<Member> aClass = Member.class;
+        Member member = new Member("정원",30);
+        Method minusAge = aClass.getDeclaredMethod("minusAge", int.class);
+        minusAge.setAccessible(true);
+        minusAge.invoke(member,3);
+
+        System.out.println("member Age = " +member.getAge());
+    }
+
 }

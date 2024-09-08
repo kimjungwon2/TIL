@@ -42,4 +42,16 @@ class ClassReflectionTest {
         //when
         classReflection.setNameFieldByReflection();
     }
+
+
+    @DisplayName("Reflection으로 Method 얻기")
+    @Test
+    void getMethodByReflection() throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+      //given
+      ClassReflection classReflection = new ClassReflection();
+
+      //when
+      classReflection.methodReflection();
+      //then
+    }
 }
