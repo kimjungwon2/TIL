@@ -1,6 +1,7 @@
 package com.practice;
 
 
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -60,6 +61,17 @@ public class ClassReflection {
         minusAge.invoke(member,3);
 
         System.out.println("member Age = " +member.getAge());
+    }
+
+    public void annotationReflection(){
+        Class<Member> aClass = Member.class;
+
+        Entity entityAnnotation = aClass.getAnnotation(Entity.class);
+        // 애너테이션의 value 값을 가져옴
+        String value = entityAnnotation.value();
+
+        // 값 출력
+        System.out.println("Annotation value: " + value);
     }
 
 }

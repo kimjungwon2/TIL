@@ -54,4 +54,15 @@ class ClassReflectionTest {
       classReflection.methodReflection();
       //then
     }
+
+    @DisplayName("Reflection으로 Annotation 획득하기")
+    @Test
+    void getAnnotationByReflection(){
+      //given
+        ClassReflection classReflection = new ClassReflection();
+      //when
+        classReflection.annotationReflection();
+
+      //then
+    }
 }
