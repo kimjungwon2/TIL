@@ -22,6 +22,15 @@ public class ReferenceType {
         System.out.println("a = "+a);
     }
 
+    public void referenceTypeForInteger() {
+        Integer a = 1;
+        Integer b = 3;
+        b = 5;
+
+        System.out.println("b = "+b);
+        System.out.println("a = "+a);
+    }
+
 
     private void func(int[] c){
         c[1] = 10;

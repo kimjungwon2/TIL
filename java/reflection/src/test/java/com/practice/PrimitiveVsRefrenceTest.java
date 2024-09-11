@@ -24,10 +24,11 @@ class PrimitiveVsRefrenceTest {
     void executeReferenceTypeForString(){
       //given
         referenceType.referenceTypeForString();
-
-      //when
-
-      //then
     }
 
+    @DisplayName("")
+    @Test
+    void executeReferenceTypeForInteger(){
+        referenceType.referenceTypeForInteger();
+    }
 }
