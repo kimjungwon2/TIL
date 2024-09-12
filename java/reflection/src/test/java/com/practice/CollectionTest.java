@@ -27,4 +27,16 @@ class CollectionTest {
     void testV3(){
         collection.iteratingCollectionsV3();
     }
+
+    @DisplayName("")
+    @Test
+    void filterV1(){
+      collection.filterAnimalV1();
+    }
+
+    @DisplayName("")
+    @Test
+    void filterV2(){
+        collection.filterAnimalV2();
+    }
 }

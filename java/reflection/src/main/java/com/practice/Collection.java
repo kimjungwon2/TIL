@@ -1,5 +1,6 @@
 package com.practice;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Collection {
@@ -28,4 +29,30 @@ public class Collection {
 
         System.out.println();
     }
+
+    public void filterAnimalV1(){
+        List<String> animals = List.of("rabbit", "tiger", "dog", "cat", "chicken");
+
+        List<String> sorted = new ArrayList<>();
+        for (String animal : animals) {
+            if (animal.length() <= 3) continue;
+            sorted.add(animal.toUpperCase());
+        }
+        sorted.sort(String::compareTo);
+        for (int i = 0; i < 2; i++) {
+            System.out.println(sorted.get(i));
+        }
+    }
+
+    public void filterAnimalV2(){
+        List<String> animals = List.of("rabbit", "tiger", "dog", "cat", "chicken");
+
+        animals.stream()
+                .filter(animal -> animal.length() > 3)
+                .map(String::toUpperCase)
+                .sorted()
+                .limit(2)
+                .forEach(System.out::println);
+    }
+
 }
