@@ -1,9 +1,6 @@
 package com.practice;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -79,6 +76,15 @@ public class Collection {
         Stream<Integer> intStream = intSet.stream();
 
         System.out.println(intSet);
+    }
+
+    public void makeMapStream(){
+        Map<String, Integer> map = Map.of("0ne",1,"two",2,"three",3,"four",4);
+
+        Stream<String> keyStream = map.keySet().stream();
+        Stream<Integer> valueStream = map.values().stream();
+
+        Stream<Map.Entry<String, Integer>> stream = map.entrySet().stream();
     }
 
 }
