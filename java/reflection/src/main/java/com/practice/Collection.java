@@ -3,6 +3,7 @@ package com.practice;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -68,8 +69,16 @@ public class Collection {
 
         Stream<String> strStream = Arrays.stream(strArray);
         IntStream intStream = Arrays.stream(intArray);
+    }
 
+    public void makeCollectionsStream(){
+        List<String> strList = List.of("one", "two", "three", "four");
+        Set<Integer> intSet = Set.of(1,2,3,4,5);
 
+        Stream<String> strStream = strList.stream();
+        Stream<Integer> intStream = intSet.stream();
+
+        System.out.println(intSet);
     }
 
 }

@@ -39,4 +39,10 @@ class CollectionTest {
     void filterV2(){
         collection.filterAnimalV2();
     }
+
+    @DisplayName("")
+    @Test
+    void makeCollectionsStream(){
+        collection.makeCollectionsStream();
+    }
 }
