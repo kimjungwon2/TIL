@@ -1,7 +1,10 @@
 package com.practice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class Collection {
 
@@ -53,6 +56,20 @@ public class Collection {
                 .sorted()
                 .limit(2)
                 .forEach(System.out::println);
+    }
+
+    public void makeArrayStream(){
+        String[] strArray = new String[]{
+                "one", "two", "three", "four"
+        };
+
+        int[] intArray = new int[]{1,2,3,4,5};
+
+
+        Stream<String> strStream = Arrays.stream(strArray);
+        IntStream intStream = Arrays.stream(intArray);
+
+
     }
 
 }
