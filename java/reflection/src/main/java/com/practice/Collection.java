@@ -1,6 +1,7 @@
 package com.practice;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -79,12 +80,33 @@ public class Collection {
     }
 
     public void makeMapStream(){
-        Map<String, Integer> map = Map.of("0ne",1,"two",2,"three",3,"four",4);
+        Map<String, Integer> map = Map.of(
+                "0ne",1,"two",2,"three",3,"four",4,"five",5,
+                "six",6,"seven",7,"eight",8,"nine",9,"ten",10
+        );
 
         Stream<String> keyStream = map.keySet().stream();
         Stream<Integer> valueStream = map.values().stream();
 
         Stream<Map.Entry<String, Integer>> stream = map.entrySet().stream();
+    }
+
+    public void diffToListAndCollectors(){
+        List<Integer> intList = List.of(1,2,3,4,5);
+
+        List<Integer> intStream = intList.stream().toList();
+        // 리스트 수정 시도 (불변 리스트이므로 예외 발생)
+        try {
+            intStream.add(6);  // UnsupportedOperationException 발생
+        } catch (UnsupportedOperationException e) {
+            System.out.println("intStream은 불변 리스트입니다. 요소를 추가할 수 없습니다.");
+        }
+
+        List<Integer> intList2 = List.of(1,2,3,4,5);
+        List<Integer> intStream2 = intList2.stream().collect(Collectors.toList());
+        intStream2.add(8);
+
+        System.out.println("intStream2:"+intStream2);
     }
 
 }

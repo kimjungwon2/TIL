@@ -45,4 +45,10 @@ class CollectionTest {
     void makeCollectionsStream(){
         collection.makeCollectionsStream();
     }
+
+    @DisplayName("")
+    @Test
+    void diffToListAndCollectors(){
+        collection.diffToListAndCollectors();
+    }
 }
