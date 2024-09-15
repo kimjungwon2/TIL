@@ -109,4 +109,13 @@ public class Collection {
         System.out.println("intStream2:"+intStream2);
     }
 
+    public void convertToOtherDataStructure(){
+        List<String> strList = List.of("one", "two", "three", "four");
+
+        Set<Integer> strSet = strList.stream()
+                .map(String::length)
+                .collect(Collectors.toSet());
+
+    }
+
 }
