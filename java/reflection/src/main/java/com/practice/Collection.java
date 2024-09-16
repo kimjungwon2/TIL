@@ -118,4 +118,20 @@ public class Collection {
 
     }
 
+    public void createSpecialStream(){
+        int[] arr = new int[]{1,2,3,4,5,6};
+
+        IntStream stream = Arrays.stream(arr);
+
+        int sum = stream.sum();
+        int min = Arrays.stream(arr).min().getAsInt();
+        int max = Arrays.stream(arr).max().getAsInt();
+        double avg = Arrays.stream(arr).average().getAsDouble();
+
+        System.out.println("sum = " + sum);
+        System.out.println("min = " + min);
+        System.out.println("max = " + max);
+        System.out.println("avg = " + avg);
+    }
+
 }
