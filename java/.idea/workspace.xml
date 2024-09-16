@@ -4,29 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8abf5c1e-0b88-49cb-ad0c-8987f23512b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_5_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_params_5_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/reflection.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/reflection.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reflection.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reflection/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reflection/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reflection/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reflection/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reflection/src/main/java/com/practice/ClassReflection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reflection/src/main/java/com/practice/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="8abf5c1e-0b88-49cb-ad0c-8987f23512b4" name="Default Changelist" comment="FEAT: 문자열을 int, double로 변환하기.">
+      <change afterPath="$PROJECT_DIR$/reflection/src/main/java/com/practice/collection/ListExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +22,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/reflection">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -59,6 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -66,40 +51,213 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "kimjungwon2"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kimjungwon2&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kimjungwon2/TIL.git",
-    "accountId": "3ee98360-0d06-4aca-b0ac-b36b4a92c5df"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kimjungwon2/TIL.git&quot;,
+    &quot;accountId&quot;: &quot;3ee98360-0d06-4aca-b0ac-b36b4a92c5df&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2GfcRFE4lP25gjD77CSeqNhCYP3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/mac20010/Users/Practice/java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.ClassReflectionTest.getAnnotationByReflection.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.ClassReflectionTest.getClassReflection.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.ClassReflectionTest.getConstructorReflection.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.ClassReflectionTest.getFieldReflection.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.ClassReflectionTest.getMethodByReflection.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ClassReflectionTest.setNameFieldByReflection.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CollectionTest.diffToListAndCollectors.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CollectionTest.filterV1.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CollectionTest.filterV2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CollectionTest.makeCollectionsStream.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CollectionTest.makeGrouping.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.CollectionTest.testV1.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CollectionTest.testV2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CollectionTest.testV3.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HelperClassTest.useArrays.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PrimitiveVsRefrenceTest.executePrimitiveType.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PrimitiveVsRefrenceTest.executeReferenceType.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PrimitiveVsRefrenceTest.executeReferenceTypeForString.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PrimitiveVsRefrenceTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StringExampleTest.doStringBuilder2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StringExampleTest.getCharAt.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StringExampleTest.getSubstring.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StringExampleTest.split.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StringExampleTest.splitString.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StringExampleTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StringExampleTest.trim.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/mac20010/Users/Practice/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.practice" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.StringExampleTest.splitString">
+    <configuration name="StringExampleTest.doStringBuilder2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/reflection" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.practice.StringExampleTest.doStringBuilder2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="StringExampleTest.split" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/reflection" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.practice.StringExampleTest.split&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="StringExampleTest.splitString" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/reflection" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.practice.StringExampleTest.splitString&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="StringExampleTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/reflection" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.practice.StringExampleTest.test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="StringExampleTest.trim" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/reflection" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.practice.StringExampleTest.trim&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.StringExampleTest.splitString" />
+        <item itemvalue="Gradle.StringExampleTest.doStringBuilder2" />
+        <item itemvalue="Gradle.StringExampleTest.test" />
+        <item itemvalue="Gradle.StringExampleTest.trim" />
+        <item itemvalue="Gradle.StringExampleTest.split" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -116,8 +274,284 @@
       <option name="presentableId" value="Default" />
       <updated>1666783069117</updated>
       <workItem from="1698746211754" duration="78000" />
-      <workItem from="1725466773613" duration="451000" />
+      <workItem from="1725466773613" duration="665000" />
+      <workItem from="1725552645887" duration="1131000" />
+      <workItem from="1725636992996" duration="977000" />
+      <workItem from="1725676552809" duration="2352000" />
+      <workItem from="1725730102975" duration="1443000" />
+      <workItem from="1725808668692" duration="375000" />
+      <workItem from="1725895566546" duration="1077000" />
+      <workItem from="1725987016572" duration="2744000" />
+      <workItem from="1726070712470" duration="2873000" />
+      <workItem from="1726155995579" duration="242000" />
+      <workItem from="1726157602088" duration="630000" />
+      <workItem from="1726158366692" duration="281000" />
+      <workItem from="1726170025564" duration="166000" />
+      <workItem from="1726249309247" duration="1917000" />
+      <workItem from="1726397492356" duration="858000" />
+      <workItem from="1726472189147" duration="1092000" />
+      <workItem from="1726623648139" duration="1331000" />
+      <workItem from="1726672680853" duration="1398000" />
+      <workItem from="1726759623387" duration="965000" />
+      <workItem from="1726850210695" duration="298000" />
     </task>
+    <task id="LOCAL-00001" summary="FEAT: Reflection으로 Class 획득하기.">
+      <option name="closed" value="true" />
+      <created>1725467270997</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725467270997</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TEST: Reflection 테스트.">
+      <option name="closed" value="true" />
+      <created>1725553250462</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725553250462</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TEST: Reflection의 field, Methods 물러오기">
+      <option name="closed" value="true" />
+      <created>1725553736281</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725553736281</updated>
+    </task>
+    <task id="LOCAL-00004" summary="FEAT: Reflection으로 생성자 가져오기.">
+      <option name="closed" value="true" />
+      <created>1725677870885</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725677870885</updated>
+    </task>
+    <task id="LOCAL-00005" summary="FEAT: 여러 개의 인자를 받을 때, Reflection 생성자 테스트.">
+      <option name="closed" value="true" />
+      <created>1725678630405</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725678630405</updated>
+    </task>
+    <task id="LOCAL-00006" summary="FEAT: Field Reflection 테스트.">
+      <option name="closed" value="true" />
+      <created>1725730525477</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725730525477</updated>
+    </task>
+    <task id="LOCAL-00007" summary="FEAT: Field Reflection으로 Field 변경하기.">
+      <option name="closed" value="true" />
+      <created>1725730939948</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725730939948</updated>
+    </task>
+    <task id="LOCAL-00008" summary="FEAT: Method Reflection">
+      <option name="closed" value="true" />
+      <created>1725808718662</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725808718662</updated>
+    </task>
+    <task id="LOCAL-00009" summary="FEAT: Reflection으로 Entity Annotation 정보 획득하기.">
+      <option name="closed" value="true" />
+      <created>1725896586075</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725896586075</updated>
+    </task>
+    <task id="LOCAL-00010" summary="FEAT: Arrays 헬퍼 클래스로 정렬.">
+      <option name="closed" value="true" />
+      <created>1725988298406</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725988298407</updated>
+    </task>
+    <task id="LOCAL-00011" summary="FEAT: ReferenceType과 Primitive 참조 비교.">
+      <option name="closed" value="true" />
+      <created>1725989151396</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725989151396</updated>
+    </task>
+    <task id="LOCAL-00012" summary="FEAT: Wrapper 불변 타입 대입.">
+      <option name="closed" value="true" />
+      <created>1726070826409</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726070826409</updated>
+    </task>
+    <task id="LOCAL-00013" summary="FEAT: Collection 각각의 버전에 맞는 출력.">
+      <option name="closed" value="true" />
+      <created>1726071907836</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726071907836</updated>
+    </task>
+    <task id="LOCAL-00014" summary="FEAT: Stream과 for문 비교.">
+      <option name="closed" value="true" />
+      <created>1726158125883</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726158125883</updated>
+    </task>
+    <task id="LOCAL-00015" summary="FEAT: 배열에서 스트림 만들기.">
+      <option name="closed" value="true" />
+      <created>1726249648106</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1726249648106</updated>
+    </task>
+    <task id="LOCAL-00016" summary="FEAT: 컬렉션에서 스트림 만들기.">
+      <option name="closed" value="true" />
+      <created>1726250073318</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726250073318</updated>
+    </task>
+    <task id="LOCAL-00017" summary="FEAT: 맵으로 스트림 만들기.">
+      <option name="closed" value="true" />
+      <created>1726250504478</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726250504478</updated>
+    </task>
+    <task id="LOCAL-00018" summary="FEAT: toList와 Collectors.toList의 차이점.">
+      <option name="closed" value="true" />
+      <created>1726398058450</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726398058450</updated>
+    </task>
+    <task id="LOCAL-00019" summary="FEAT: List를 Stream으로 Set 형태로 바꾸기.">
+      <option name="closed" value="true" />
+      <created>1726398310426</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726398310426</updated>
+    </task>
+    <task id="LOCAL-00020" summary="FEAT: 특수 스트림 만들기.">
+      <option name="closed" value="true" />
+      <created>1726472519235</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1726472519235</updated>
+    </task>
+    <task id="LOCAL-00021" summary="FEAT: 특수 스트림을 일반 스트림으로 변형.">
+      <option name="closed" value="true" />
+      <created>1726472666975</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1726472666975</updated>
+    </task>
+    <task id="LOCAL-00022" summary="FEAT: 스트림을 Grouping 하기.">
+      <option name="closed" value="true" />
+      <created>1726473111382</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1726473111382</updated>
+    </task>
+    <task id="LOCAL-00023" summary="FEAT: String Replace 비교.">
+      <option name="closed" value="true" />
+      <created>1726624056473</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1726624056473</updated>
+    </task>
+    <task id="LOCAL-00024" summary="FEAT: 문자열 길이 구하기.">
+      <option name="closed" value="true" />
+      <created>1726624184665</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1726624184665</updated>
+    </task>
+    <task id="LOCAL-00025" summary="FEAT: 특정 위치의 문자 구하기.">
+      <option name="closed" value="true" />
+      <created>1726624360972</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1726624360972</updated>
+    </task>
+    <task id="LOCAL-00026" summary="FEAT: substring 함수">
+      <option name="closed" value="true" />
+      <created>1726624715211</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1726624715211</updated>
+    </task>
+    <task id="LOCAL-00027" summary="FEAT: 해당 문자열이 있는지 확인.">
+      <option name="closed" value="true" />
+      <created>1726624912632</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1726624912632</updated>
+    </task>
+    <task id="LOCAL-00028" summary="FEAT: split으로 문자열 나누기.">
+      <option name="closed" value="true" />
+      <created>1726672903461</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1726672903462</updated>
+    </task>
+    <task id="LOCAL-00029" summary="FEAT: 앞 뒤 문자열 제거.">
+      <option name="closed" value="true" />
+      <created>1726673946152</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1726673946152</updated>
+    </task>
+    <task id="LOCAL-00030" summary="FEAT: 기본적인 StringBuilder 함수.">
+      <option name="closed" value="true" />
+      <created>1726760141459</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1726760141459</updated>
+    </task>
+    <task id="LOCAL-00031" summary="FEAT: StringBuilder 함수 활용.">
+      <option name="closed" value="true" />
+      <created>1726760339249</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1726760339249</updated>
+    </task>
+    <task id="LOCAL-00032" summary="FEAT: 문자열을 int, double로 변환하기.">
+      <option name="closed" value="true" />
+      <created>1726760514731</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1726760514731</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,5 +564,79 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="FEAT: Method Reflection" />
+    <MESSAGE value="FEAT: Reflection으로 Entity Annotation 정보 획득하기." />
+    <MESSAGE value="FEAT: Arrays 헬퍼 클래스로 정렬." />
+    <MESSAGE value="FEAT: ReferenceType과 Primitive 참조 비교." />
+    <MESSAGE value="FEAT: Wrapper 불변 타입 대입." />
+    <MESSAGE value="FEAT: Collection 각각의 버전에 맞는 출력." />
+    <MESSAGE value="FEAT: Stream과 for문 비교." />
+    <MESSAGE value="FEAT: 배열에서 스트림 만들기." />
+    <MESSAGE value="FEAT: 컬렉션에서 스트림 만들기." />
+    <MESSAGE value="FEAT: 맵으로 스트림 만들기." />
+    <MESSAGE value="FEAT: toList와 Collectors.toList의 차이점." />
+    <MESSAGE value="FEAT: List를 Stream으로 Set 형태로 바꾸기." />
+    <MESSAGE value="FEAT: 특수 스트림 만들기." />
+    <MESSAGE value="FEAT: 특수 스트림을 일반 스트림으로 변형." />
+    <MESSAGE value="FEAT: 스트림을 Grouping 하기." />
+    <MESSAGE value="FEAT: String Replace 비교." />
+    <MESSAGE value="FEAT: 문자열 길이 구하기." />
+    <MESSAGE value="FEAT: 특정 위치의 문자 구하기." />
+    <MESSAGE value="FEAT: substring 함수" />
+    <MESSAGE value="FEAT: 해당 문자열이 있는지 확인." />
+    <MESSAGE value="FEAT: split으로 문자열 나누기." />
+    <MESSAGE value="FEAT: 앞 뒤 문자열 제거." />
+    <MESSAGE value="FEAT: 기본적인 StringBuilder 함수." />
+    <MESSAGE value="FEAT: StringBuilder 함수 활용." />
+    <MESSAGE value="FEAT: 문자열을 int, double로 변환하기." />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT: 문자열을 int, double로 변환하기." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reflection/src/test/java/com/practice/ClassReflectionTest.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reflection/src/main/java/com/practice/ClassReflection.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reflection/src/main/java/com/practice/ClassReflection.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reflection/src/main/java/com/practice/ClassReflection.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reflection/src/main/java/com/practice/ClassReflection.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reflection/src/main/java/com/practice/ClassReflection.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reflection/src/test/java/com/practice/CollectionTest.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reflection/src/main/java/com/practice/Collection.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
