@@ -134,6 +134,18 @@ public class Collection {
         System.out.println("avg = " + avg);
     }
 
+    public void makeGroupingStreams(){
+        List<String> strList = List.of("one", "two", "three", "four");
+
+        Map<Integer, List<String>> grouping = strList.stream()
+                .collect(Collectors.groupingBy(String::length));
+
+        grouping.forEach((key, value) -> {
+            System.out.println(key + ": " + value);
+        });
+    }
+
+
     public void convertBasicStream(){
         int[] arr = new int[]{1,2,3,4,5,6};
 

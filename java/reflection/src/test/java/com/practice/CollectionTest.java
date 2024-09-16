@@ -51,4 +51,11 @@ class CollectionTest {
     void diffToListAndCollectors(){
         collection.diffToListAndCollectors();
     }
+
+    @DisplayName("")
+    @Test
+    void makeGrouping(){
+      collection.makeGroupingStreams();
+    }
+
 }
