@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8abf5c1e-0b88-49cb-ad0c-8987f23512b4" name="Default Changelist" comment="FEAT: 문자열을 int, double로 변환하기.">
-      <change afterPath="$PROJECT_DIR$/reflection/src/main/java/com/practice/collection/ListExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/src/main/java/com/practice/collection/ListExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/src/main/java/com/practice/collection/ListExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +292,7 @@
       <workItem from="1726623648139" duration="1331000" />
       <workItem from="1726672680853" duration="1398000" />
       <workItem from="1726759623387" duration="965000" />
-      <workItem from="1726850210695" duration="298000" />
+      <workItem from="1726850210695" duration="925000" />
     </task>
     <task id="LOCAL-00001" summary="FEAT: Reflection으로 Class 획득하기.">
       <option name="closed" value="true" />
