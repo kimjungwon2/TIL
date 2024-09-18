@@ -14,4 +14,15 @@ public class StringExample {
 
         System.out.println("replaced = " + replaced);
     }
+
+    public void getLength(){
+        String character = "Hello, world!";
+
+        int length = character.length();
+
+        System.out.println("length = " + length);
+    }
+
+
+
 }
