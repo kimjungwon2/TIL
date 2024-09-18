@@ -23,4 +23,11 @@ class StringExampleTest {
     void contain(){
         stringExample.contain();
     }
+
+    @DisplayName("")
+    @Test
+    void split(){
+        stringExample.split();
+    }
+
 }

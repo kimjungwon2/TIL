@@ -41,4 +41,14 @@ public class StringExample {
         System.out.println(isContains);
     }
 
+    public void split(){
+        String str = "Hello my name is jungwon";
+        String[] words = str.split(" ");
+
+        for(String word: words){
+            System.out.println(word);
+        }
+
+    }
+
 }
