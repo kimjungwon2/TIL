@@ -1,5 +1,6 @@
 package com.practice;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,5 +16,11 @@ class StringExampleTest {
     @Test
     void getSubstring() {
         stringExample.doSubstring();
+    }
+
+    @DisplayName("")
+    @Test
+    void contain(){
+        stringExample.contain();
     }
 }

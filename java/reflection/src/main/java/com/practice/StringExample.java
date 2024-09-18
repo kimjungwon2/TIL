@@ -35,4 +35,10 @@ public class StringExample {
         System.out.println(substring);
     }
 
+    public void contain(){
+        String str = "banana";
+        boolean isContains = str.contains("ab");
+        System.out.println(isContains);
+    }
+
 }
