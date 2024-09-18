@@ -30,4 +30,10 @@ class StringExampleTest {
         stringExample.split();
     }
 
+    @DisplayName("")
+    @Test
+    void trim(){
+        stringExample.trim();
+    }
+
 }

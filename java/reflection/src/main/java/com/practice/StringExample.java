@@ -51,4 +51,12 @@ public class StringExample {
 
     }
 
+
+    public void trim(){
+        String message = " Hi banana i'm jungwon\n";
+
+        String trimmed = message.trim();
+        System.out.println(message);
+        System.out.println(trimmed);
+    }
 }
