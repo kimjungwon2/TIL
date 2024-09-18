@@ -11,4 +11,9 @@ class StringExampleTest {
 
         stringExample.getCharAt();
     }
+
+    @Test
+    void getSubstring() {
+        stringExample.doSubstring();
+    }
 }

@@ -28,4 +28,11 @@ public class StringExample {
         char c = str.charAt(2);
         System.out.println(c);
     }
+
+    public void doSubstring(){
+        String str = "banana";
+        String substring = str.substring(1, 4);
+        System.out.println(substring);
+    }
+
 }
