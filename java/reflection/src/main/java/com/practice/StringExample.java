@@ -23,6 +23,9 @@ public class StringExample {
         System.out.println("length = " + length);
     }
 
-
-
+    public void getCharAt(){
+        String str = "banana";
+        char c = str.charAt(2);
+        System.out.println(c);
+    }
 }
