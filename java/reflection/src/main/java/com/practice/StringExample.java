@@ -76,6 +76,14 @@ public class StringExample {
         sb.deleteCharAt(1);
         System.out.println(sb);
 
+        sb.reverse();
+        System.out.println(sb);
 
+    }
+
+    public void doStringBuilder2(){
+        StringBuilder sb = new StringBuilder("Hello, world!");
+        sb.setLength(5);
+        System.out.println(sb);
     }
 }

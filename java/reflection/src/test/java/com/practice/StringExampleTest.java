@@ -38,8 +38,14 @@ class StringExampleTest {
 
     @DisplayName("")
     @Test
-    void test(){
+    void doStringBuilder(){
       stringExample.doStringBuilder();
+    }
+
+    @DisplayName("")
+    @Test
+    void doStringBuilder2(){
+        stringExample.doStringBuilder2();
     }
 
 
