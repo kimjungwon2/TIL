@@ -59,4 +59,23 @@ public class StringExample {
         System.out.println(message);
         System.out.println(trimmed);
     }
+
+    public void doStringBuilder(){
+        StringBuilder sb = new StringBuilder("안녕하세요, ");
+        sb.append("나는 ");
+
+        System.out.println(sb);
+
+        sb.insert(6, "중간에 삽입");
+        System.out.println(sb);
+
+        sb.delete(6,12);
+
+        System.out.println(sb);
+
+        sb.deleteCharAt(1);
+        System.out.println(sb);
+
+
+    }
 }

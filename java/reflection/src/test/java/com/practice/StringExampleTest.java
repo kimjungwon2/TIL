@@ -36,4 +36,11 @@ class StringExampleTest {
         stringExample.trim();
     }
 
+    @DisplayName("")
+    @Test
+    void test(){
+      stringExample.doStringBuilder();
+    }
+
+
 }
