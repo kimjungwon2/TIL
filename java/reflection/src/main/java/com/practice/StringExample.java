@@ -86,4 +86,18 @@ public class StringExample {
         sb.setLength(5);
         System.out.println(sb);
     }
+
+
+    public void splitString(){
+        String input = "-43 5 10.4";
+        String[] split = input.split(" ");
+
+        int num = Integer.parseInt(split[0]);
+        int num2 = Integer.parseInt(split[1]);
+        double num3 = Double.parseDouble(split[2]);
+
+        System.out.println(num);
+        System.out.println(num2);
+        System.out.println(num3);
+    }
 }

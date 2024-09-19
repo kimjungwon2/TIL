@@ -48,5 +48,9 @@ class StringExampleTest {
         stringExample.doStringBuilder2();
     }
 
-
+    @DisplayName("")
+    @Test
+    void splitString(){
+        stringExample.splitString();
+    }
 }
