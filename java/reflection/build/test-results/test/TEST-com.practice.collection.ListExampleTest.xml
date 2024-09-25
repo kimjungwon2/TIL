@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.practice.collection.ListExampleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-20T17:05:49" hostname="DESKTOP-MST95U4" time="0.038">
+  <properties/>
+  <testcase name="깊은 복사" classname="com.practice.collection.ListExampleTest" time="0.038"/>
+  <system-out><![CDATA[arr[0][0] = 1
+copy[0][0] = 9999
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

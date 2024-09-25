@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8abf5c1e-0b88-49cb-ad0c-8987f23512b4" name="Default Changelist" comment="FEAT: 문자열을 int, double로 변환하기.">
+    <list default="true" id="8abf5c1e-0b88-49cb-ad0c-8987f23512b4" name="Default Changelist" comment="FEAT: 얇은 복사 VS 깊은 복사.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reflection/src/main/java/com/practice/collection/ListExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/src/main/java/com/practice/collection/ListExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/reports/tests/test/classes/com.practice.StringExampleTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/reports/tests/test/packages/com.practice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/test-results/test/TEST-com.practice.StringExampleTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/tmp/compileJava/compileTransaction/stash-dir/StringExample.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/tmp/compileTestJava/compileTransaction/stash-dir/StringExampleTest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reflection/src/main/java/com/practice/collection/DynamicArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/reflection/src/main/java/com/practice/collection/DynamicArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +110,8 @@
     &quot;Gradle.CollectionTest.testV2.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.CollectionTest.testV3.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.HelperClassTest.useArrays.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ListExampleTest.deepCopyTwoDimensionalArray.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ListExampleTest.swallowCopyTwoDimensionalArray.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.PrimitiveVsRefrenceTest.executePrimitiveType.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.PrimitiveVsRefrenceTest.executeReferenceType.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.PrimitiveVsRefrenceTest.executeReferenceTypeForString.executor&quot;: &quot;Run&quot;,
@@ -123,10 +143,59 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.practice.collection" />
       <recent name="com.practice" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.StringExampleTest.splitString">
+  <component name="RunManager" selected="Gradle.ListExampleTest.deepCopyTwoDimensionalArray">
+    <configuration name="ListExampleTest.deepCopyTwoDimensionalArray" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/reflection" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.practice.collection.ListExampleTest.deepCopyTwoDimensionalArray&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ListExampleTest.swallowCopyTwoDimensionalArray" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/reflection" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.practice.collection.ListExampleTest.swallowCopyTwoDimensionalArray&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="StringExampleTest.doStringBuilder2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -141,30 +210,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.practice.StringExampleTest.doStringBuilder2&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="StringExampleTest.split" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/reflection" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.practice.StringExampleTest.split&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -223,37 +268,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="StringExampleTest.trim" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/reflection" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.practice.StringExampleTest.trim&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ListExampleTest.deepCopyTwoDimensionalArray" />
+        <item itemvalue="Gradle.ListExampleTest.swallowCopyTwoDimensionalArray" />
         <item itemvalue="Gradle.StringExampleTest.splitString" />
         <item itemvalue="Gradle.StringExampleTest.doStringBuilder2" />
         <item itemvalue="Gradle.StringExampleTest.test" />
-        <item itemvalue="Gradle.StringExampleTest.trim" />
-        <item itemvalue="Gradle.StringExampleTest.split" />
       </list>
     </recent_temporary>
   </component>
@@ -292,7 +313,8 @@
       <workItem from="1726623648139" duration="1331000" />
       <workItem from="1726672680853" duration="1398000" />
       <workItem from="1726759623387" duration="965000" />
-      <workItem from="1726850210695" duration="925000" />
+      <workItem from="1726850210695" duration="2420000" />
+      <workItem from="1727362631065" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="FEAT: Reflection으로 Class 획득하기.">
       <option name="closed" value="true" />
@@ -550,7 +572,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726760514731</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="FEAT: 얇은 복사 VS 깊은 복사.">
+      <option name="closed" value="true" />
+      <created>1726851996024</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1726851996024</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -565,7 +595,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FEAT: Method Reflection" />
     <MESSAGE value="FEAT: Reflection으로 Entity Annotation 정보 획득하기." />
     <MESSAGE value="FEAT: Arrays 헬퍼 클래스로 정렬." />
     <MESSAGE value="FEAT: ReferenceType과 Primitive 참조 비교." />
@@ -590,7 +619,8 @@
     <MESSAGE value="FEAT: 기본적인 StringBuilder 함수." />
     <MESSAGE value="FEAT: StringBuilder 함수 활용." />
     <MESSAGE value="FEAT: 문자열을 int, double로 변환하기." />
-    <option name="LAST_COMMIT_MESSAGE" value="FEAT: 문자열을 int, double로 변환하기." />
+    <MESSAGE value="FEAT: 얇은 복사 VS 깊은 복사." />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT: 얇은 복사 VS 깊은 복사." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
