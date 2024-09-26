@@ -38,4 +38,13 @@ public class DynamicArray {
         System.out.println(arrayList);
 
     }
+
+    public void copy(){
+        List<Integer> arrayList = new ArrayList<>(List.of(1,2,100,500,1000));
+        List<Integer> destList = new ArrayList<>(arrayList);
+
+        System.out.println(destList);
+    }
+
+
 }
