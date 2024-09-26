@@ -1,6 +1,7 @@
 package com.practice.collection;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class DynamicArray {
@@ -28,4 +29,13 @@ public class DynamicArray {
         System.out.println(list);
     }
 
+    public void sort(){
+        List<Integer> arrayList = new ArrayList<>(List.of(1,3,2,4,5));
+        arrayList.sort(Integer::compareTo);
+        System.out.println(arrayList);
+
+        arrayList.sort(Comparator.reverseOrder());
+        System.out.println(arrayList);
+
+    }
 }
