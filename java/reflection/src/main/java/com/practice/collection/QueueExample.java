@@ -1,6 +1,7 @@
 package com.practice.collection;
 
 import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -24,5 +25,20 @@ public class QueueExample {
         System.out.println(empty);
     }
 
+    public void useStack(){
+        Deque<Integer> s = new ArrayDeque<>();
 
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        System.out.println(s);
+
+        s.pop();
+        s.pop();
+        System.out.println(s);
+
+        boolean empty = s.isEmpty();
+
+        System.out.println(empty);
+    }
 }
